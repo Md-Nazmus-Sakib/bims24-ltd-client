@@ -18,9 +18,9 @@ const FindShop = () => {
     return (
         <div className=' min-h-[800px] bg-gradient-to-r from-[#3F096B] to-[#27094C] text-white'>
 
-            <h1 className='w-1/2 mx-auto text-4xl text-center py-12 font-extrabold tracking-wide'>Please initiate the repair process for your mobile device </h1>
+            <h1 className='sm:w-1/2 mx-auto text-4xl text-center py-12 font-extrabold tracking-wide'>Please initiate the repair process for your mobile device </h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                <div className='pl-12 mx-auto'>
+                <div className='sm:pl-12 mx-auto'>
                     <div className="card_shop">
                         <div className="card__content font-bold text-3xl py-4">Find mobile repair shop near you ↓
                             <div className="container my-4">

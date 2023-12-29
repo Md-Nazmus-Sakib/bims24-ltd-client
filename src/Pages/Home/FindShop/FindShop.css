@@ -1,5 +1,5 @@
 .card_shop {
-    width: 300px;
+    width: 290px;
     height: 500px;
     background: lightgrey;
     position: relative;
@@ -26,7 +26,7 @@
 .card_shop::after {
     content: '';
     height: 10px;
-    width: 300px;
+    width: 290px;
     background: #6d74e3;
     position: absolute;
     top: -14.7px;
