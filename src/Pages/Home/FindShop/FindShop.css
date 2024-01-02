@@ -202,7 +202,7 @@
 
 
 
-.group {
+.group8 {
     filter: drop-shadow(0 0 10px #E14E1D) drop-shadow(0 0 60px #E14E1D)
 }
 
@@ -234,13 +234,13 @@
     filter: drop-shadow(0 0 10px #FFCC30) drop-shadow(0 0 60px #FFCC30)
 }
 
-.group8 {
+/* .group8 {
     filter: drop-shadow(0 0 10px #00D8FF) drop-shadow(0 0 60px #00D8FF)
 }
 
 .group9 {
     filter: drop-shadow(0 0 10px #12924F) drop-shadow(0 0 60px #12924F)
-}
+} */
 
 .shadow1:before {
     content: '';

@@ -12,6 +12,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 const FindShop = () => {
 
@@ -78,56 +79,74 @@ const FindShop = () => {
                         className="mySwiper h-full text-center">
 
                         <SwiperSlide>
-                            <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group shadow1 item w-72 h-72 my-16  '>
+                            <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group8 shadow1 item w-72 h-72 my-16  '>
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Barishal</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <button className="card-btn text-black ">Barishal</button>
+                                <Link to={'/district/Barishal'}> <button className="card-btn text-black ">Barishal</button></Link>
                             </div>
 
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group1 shadow1 item w-72 h-72 my-16'>
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
-                                <h1 className='text-xl text-white  mt-6'>Barishal</h1>
+                                <h1 className='text-xl text-white  mt-6'>Chittagong</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <button className="card-btn text-black">Click</button>
+                                <Link to={'/district/Chittagong'}> <button className="card-btn text-black ">Chittagong</button></Link>
                             </div>
 
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group2 shadow1 item w-72 h-72 my-16 '>
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
-                                <h1 className='text-xl text-white  mt-6'>Barishal</h1>
+                                <h1 className='text-xl text-white  mt-6'> Dhaka</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <button className="card-btn text-black">Click</button>
+                                <Link to={'/district/Dhaka'}> <button className="card-btn text-black ">Dhaka</button></Link>
                             </div>
 
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group3 shadow1 item w-72 h-72 my-16 '>
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
-                                <h1 className='text-xl text-white  mt-6'>Barishal</h1>
+                                <h1 className='text-xl text-white  mt-6'>Khulna</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <button className="card-btn text-black">Click</button>
+                                <Link to={'/district/Khulna'}> <button className="card-btn text-black ">Khulna</button></Link>
                             </div>
 
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group4 shadow1 item w-72 h-72 my-16 '>
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
-                                <h1 className='text-xl text-white  mt-6'>Barishal</h1>
+                                <h1 className='text-xl text-white  mt-6'>Rajshahi</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <button className="card-btn text-black">Click</button>
+                                <Link to={'/district/Rajshahi'}> <button className="card-btn text-black ">Rajshahi</button></Link>
                             </div>
 
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group5 shadow1 item w-72 h-72 my-16 '>
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
-                                <h1 className='text-xl text-white  mt-6'>Barishal</h1>
+                                <h1 className='text-xl text-white  mt-6'>Rangpur</h1>
                                 <div className="overlay rounded-3xl "></div>
-                                <button className="card-btn text-black">Click</button>
+                                <Link to={'/district/Rangpur'}> <button className="card-btn text-black ">Rangpur</button></Link>
+                            </div>
+
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group6 shadow1 item w-72 h-72 my-16 '>
+                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <h1 className='text-xl text-white  mt-6'> Mymensingh</h1>
+                                <div className="overlay rounded-3xl "></div>
+                                <Link to={'/district/Mymensingh'}> <button className="card-btn text-black ">Mymensingh</button></Link>
+                            </div>
+
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group7 shadow1 item w-72 h-72 my-16 '>
+                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <h1 className='text-xl text-white  mt-6'>Sylhet</h1>
+                                <div className="overlay rounded-3xl "></div>
+                                <Link to={'/district/Sylhet'}> <button className="card-btn text-black ">Sylhet</button></Link>
                             </div>
 
                         </SwiperSlide>
@@ -146,86 +165,3 @@ export default FindShop;
 
 
 
-{/* <Swiper
-                            slidesPerView={1}
-                            spaceBetween={10}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            // breakpoints={{
-                            //     640: {
-                            //         slidesPerView: 2,
-                            //         spaceBetween: 20,
-                            //     },
-                            //     768: {
-                            //         slidesPerView: 4,
-                            //         spaceBetween: 40,
-                            //     },
-                            //     1024: {
-                            //         slidesPerView: 5,
-                            //         spaceBetween: 50,
-                            //     },
-                            // }}
-                            modules={[Pagination]}
-                            className="mySwiper py-20 text-center"
-                        >
-                            <SwiperSlide>
-                                <div className=' px-2 py-4 rounded-3xl mx-8 group shadow1 item'>
-                                    <img className='w-60 h-full relative' src={img} alt="" />
-                                    <h1 className='text-xl text-white'>Barishal</h1>
-                                    <div className="overlay"></div>
-                                    <button className="card-btn">Click</button>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=' px-2 py-4 rounded-3xl mx-8 group shadow1 item'>
-                                    <img className='w-60 h-full relative' src={img} alt="" />
-                                    <h1 className='text-xl text-white'>Barishal</h1>
-                                    <div className="overlay"></div>
-                                    <button className="card-btn">Click</button>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=' px-2 py-4 rounded-3xl mx-8 group shadow1 item'>
-                                    <img className='w-60 h-full relative' src={img} alt="" />
-                                    <h1 className='text-xl text-white'>Barishal</h1>
-                                    <div className="overlay"></div>
-                                    <button className="card-btn">Click</button>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=' px-2 py-4 rounded-3xl mx-8 group shadow1 item'>
-                                    <img className='w-60 h-full relative' src={img} alt="" />
-                                    <h1 className='text-xl text-white'>Barishal</h1>
-                                    <div className="overlay"></div>
-                                    <button className="card-btn">Click</button>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=' px-2 py-4 rounded-3xl mx-8 group shadow1 item'>
-                                    <img className='w-60 h-full relative' src={img} alt="" />
-                                    <h1 className='text-xl text-white'>Barishal</h1>
-                                    <div className="overlay"></div>
-                                    <button className="card-btn">Click</button>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=' px-2 py-4 rounded-3xl mx-8 group shadow1 item'>
-                                    <img className='w-60 h-full relative' src={img} alt="" />
-                                    <h1 className='text-xl text-white'>Barishal</h1>
-                                    <div className="overlay"></div>
-                                    <button className="card-btn">Click</button>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=' px-2 py-4 rounded-3xl mx-8 group shadow1 item'>
-                                    <img className='w-60 h-full relative' src={img} alt="" />
-                                    <h1 className='text-xl text-white'>Barishal</h1>
-                                    <div className="overlay"></div>
-                                    <button className="card-btn">Click</button>
-                                </div>
-                            </SwiperSlide>
-
-
-
-                        </Swiper> */}

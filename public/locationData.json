@@ -1,0 +1,220 @@
+{
+    "divisions": [
+        {
+            "name": "Dhaka",
+            "districts": [
+                {
+                    "name": "Dhaka",
+                    "towns": [
+                        "Uttara",
+                        "Gulshan"
+                    ]
+                },
+                {
+                    "name": "Faridpur",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Gazipur",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Gopalganj",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Kishoreganj",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Madaripur",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Manikganj",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Munshiganj",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Narayanganj",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Narsingdi",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Rajbari",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Shariatpur",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                },
+                {
+                    "name": "Tangail",
+                    "towns": [
+                        "Tongi",
+                        "Joydebpur"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Chittagong",
+            "districts": [
+                {
+                    "name": "Bandarban",
+                    "towns": [
+                        "Agrabad",
+                        "Chandgaon"
+                    ]
+                },
+                {
+                    "name": "Brahmanbaria",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                },
+                {
+                    "name": "Chandpur",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                },
+                {
+                    "name": "Chittagong",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                },
+                {
+                    "name": "Comilla",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                },
+                {
+                    "name": "Cox's Bazar",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                },
+                {
+                    "name": "Feni",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                },
+                {
+                    "name": "Khagrachhari",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                },
+                {
+                    "name": "Lakshmipur",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                },
+                {
+                    "name": "Noakhali",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                },
+                {
+                    "name": "Rangamati",
+                    "towns": [
+                        "Cox's Bazar Sadar",
+                        "Teknaf"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Rajshahi",
+            "districts": [
+                {
+                    "name": "Rajshahi",
+                    "towns": [
+                        "Rajshahi City",
+                        "Puthia"
+                    ]
+                },
+                {
+                    "name": "Bogra",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Khulna",
+            "districts": [
+                {
+                    "name": "Khulna",
+                    "towns": [
+                        "Khulna City",
+                        "Jessore"
+                    ]
+                },
+                {
+                    "name": "Satkhira",
+                    "towns": [
+                        "Satkhira Sadar",
+                        "Tala"
+                    ]
+                }
+            ]
+        }
+    ]
+}
