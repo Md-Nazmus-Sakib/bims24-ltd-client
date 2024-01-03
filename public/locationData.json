@@ -179,6 +179,147 @@
             ]
         },
         {
+            "name": "Barisal",
+            "districts": [
+                {
+                    "name": "Barguna",
+                    "towns": [
+                        "Rajshahi City",
+                        "Puthia"
+                    ]
+                },
+                {
+                    "name": "Barishal",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Bhola",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Jhalokati",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Patuakhali",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Pirojpur",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Mymensingh",
+            "districts": [
+                {
+                    "name": "Jamalpur",
+                    "towns": [
+                        "Rajshahi City",
+                        "Puthia"
+                    ]
+                },
+                {
+                    "name": "Mymensingh",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Netrokona",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Sherpur",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Rangpur",
+            "districts": [
+                {
+                    "name": "Dinajpur",
+                    "towns": [
+                        "Rajshahi City",
+                        "Puthia"
+                    ]
+                },
+                {
+                    "name": "Gaibandha",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Kurigram",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Lalmonirhat",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Nilphamari",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Panchagarh",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Rangpur",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Thakurgaon",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Rajshahi",
             "districts": [
                 {
@@ -194,6 +335,81 @@
                         "Bogra Sadar",
                         "Shibganj"
                     ]
+                },
+                {
+                    "name": "Joypurhat",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Naogaon",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Natore",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Chapai Nawabganj",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Pabna",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Sirajganj",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sylhet",
+            "districts": [
+                {
+                    "name": "Habiganj",
+                    "towns": [
+                        "Rajshahi City",
+                        "Puthia"
+                    ]
+                },
+                {
+                    "name": "Moulvibazar",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Sunamganj",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
+                },
+                {
+                    "name": "Sylhet",
+                    "towns": [
+                        "Bogra Sadar",
+                        "Shibganj"
+                    ]
                 }
             ]
         },
@@ -201,10 +417,66 @@
             "name": "Khulna",
             "districts": [
                 {
-                    "name": "Khulna",
+                    "name": "Bagerhat",
                     "towns": [
                         "Khulna City",
                         "Jessore"
+                    ]
+                },
+                {
+                    "name": "Chuadanga",
+                    "towns": [
+                        "Satkhira Sadar",
+                        "Tala"
+                    ]
+                },
+                {
+                    "name": "Jashore",
+                    "towns": [
+                        "Satkhira Sadar",
+                        "Tala"
+                    ]
+                },
+                {
+                    "name": "Jhenaidah",
+                    "towns": [
+                        "Satkhira Sadar",
+                        "Tala"
+                    ]
+                },
+                {
+                    "name": "Khulna",
+                    "towns": [
+                        "Satkhira Sadar",
+                        "Tala"
+                    ]
+                },
+                {
+                    "name": "Kushtia",
+                    "towns": [
+                        "Satkhira Sadar",
+                        "Tala"
+                    ]
+                },
+                {
+                    "name": "Magura",
+                    "towns": [
+                        "Satkhira Sadar",
+                        "Tala"
+                    ]
+                },
+                {
+                    "name": "Meherpur",
+                    "towns": [
+                        "Satkhira Sadar",
+                        "Tala"
+                    ]
+                },
+                {
+                    "name": "Narail",
+                    "towns": [
+                        "Satkhira Sadar",
+                        "Tala"
                     ]
                 },
                 {

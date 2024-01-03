@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import District from './District';
 
 const FindInDistricts = () => {
     const { districtName } = useParams();
@@ -7,7 +8,7 @@ const FindInDistricts = () => {
     const [locationName, setLocationName] = useState([]);
     console.log(locationName.divisions)
     const districts = locationName?.divisions?.find(location => location.name === districtName);
-    console.log(districts.districts)
+    console.log(districts?.districts)
 
 
     useEffect(() => {
@@ -25,8 +26,10 @@ const FindInDistricts = () => {
 
 
     return (
-        <div>
-
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-12'>
+            {
+                districts?.districts && districts.districts.map((dis, index) => <District key={index} dis={dis}></District>)
+            }
         </div>
     );
 };

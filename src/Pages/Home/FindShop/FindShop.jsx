@@ -81,9 +81,9 @@ const FindShop = () => {
                         <SwiperSlide>
                             <div className=' px-2 py-4 rounded-3xl mx-auto md:mx-8 group8 shadow1 item w-72 h-72 my-16  '>
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
-                                <h1 className='text-xl text-white  mt-6'>Barishal</h1>
+                                <h1 className='text-xl text-white  mt-6'>Barisal</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <Link to={'/district/Barishal'}> <button className="card-btn text-black ">Barishal</button></Link>
+                                <Link to={'/district/Barisal'}> <button className="card-btn text-black ">Barisal</button></Link>
                             </div>
 
                         </SwiperSlide>
