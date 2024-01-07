@@ -6,92 +6,155 @@
                 {
                     "name": "Dhaka",
                     "towns": [
-                        "Uttara",
-                        "Gulshan"
+                        "Dhamrai",
+                        "Dohar",
+                        "Keraniganj",
+                        "Nawabganj",
+                        "Savar"
                     ]
                 },
                 {
                     "name": "Faridpur",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Alfadanga",
+                        "Bhanga",
+                        "Boalmari",
+                        "Charbhadrasan",
+                        "Faridpur Sadar",
+                        "Madhukhali",
+                        "Nagarkanda",
+                        "Sadarpur",
+                        "Saltha"
                     ]
                 },
                 {
                     "name": "Gazipur",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Gazipur Sadar",
+                        "Kaliakair",
+                        "Kapasia",
+                        "Sreepur",
+                        "Kaliganj"
                     ]
                 },
                 {
                     "name": "Gopalganj",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Gopalganj Sadar",
+                        "Kashiani",
+                        "Kotalipara",
+                        "Muksudpur",
+                        "Tungipara"
                     ]
                 },
                 {
                     "name": "Kishoreganj",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Kuliarchar",
+                        "Hossainpur",
+                        "Pakundia",
+                        "Kishoreganj Sadar",
+                        "Bajitpur",
+                        "Austagram",
+                        "Karimganj",
+                        "Katiadi",
+                        "Tarail",
+                        "Itna",
+                        "Nikli",
+                        "Mithamain",
+                        "Bhairab"
                     ]
                 },
                 {
                     "name": "Madaripur",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Madaripur Sadar",
+                        "Kalkini",
+                        "Rajoir",
+                        "Shibchar",
+                        "Dasar"
                     ]
                 },
                 {
                     "name": "Manikganj",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Daulatpur",
+                        "Ghior",
+                        "Harirampur",
+                        "Manikganj Sadar",
+                        "Saturia",
+                        "Singair",
+                        "Shivalaya"
                     ]
                 },
                 {
                     "name": "Munshiganj",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Lohajang",
+                        "Sreenagar",
+                        "Munshiganj Sadar",
+                        "Sirajdikhan",
+                        "Tongibari",
+                        "Gazaria"
                     ]
                 },
                 {
                     "name": "Narayanganj",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Narayanganj Sadar",
+                        "Sonargaon",
+                        "Bandar",
+                        "Araihazar",
+                        "Rupganj"
                     ]
                 },
                 {
                     "name": "Narsingdi",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Belabo",
+                        "Monohardi",
+                        "Narsingdi Sadar",
+                        "Palash",
+                        "Raipura",
+                        "Shibpur"
                     ]
                 },
                 {
                     "name": "Rajbari",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Baliakandi",
+                        "Goalanda",
+                        "Pangsha",
+                        "Kalukhali",
+                        "Rajbari Sadar"
                     ]
                 },
                 {
                     "name": "Shariatpur",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Shariatpur Sadar",
+                        "Damudya",
+                        "Naria",
+                        "Zanjira",
+                        "Bhedarganj",
+                        "Gosairhat"
                     ]
                 },
                 {
                     "name": "Tangail",
                     "towns": [
-                        "Tongi",
-                        "Joydebpur"
+                        "Basail",
+                        "Bhuapur",
+                        "Delduar",
+                        "Dhanbari",
+                        "Ghatail",
+                        "Gopalpur",
+                        "Kalihati",
+                        "Madhupur",
+                        "Mirzapur",
+                        "Nagarpur",
+                        "Sakhipur",
+                        "Tangail Sadar"
                     ]
                 }
             ]
@@ -102,78 +165,161 @@
                 {
                     "name": "Bandarban",
                     "towns": [
-                        "Agrabad",
-                        "Chandgaon"
+                        "Alikadam",
+                        "Thanchi",
+                        "Naikhongchhari",
+                        "Bandarban Sadar",
+                        "Ruma",
+                        "Rowangchhar",
+                        "Lama"
                     ]
                 },
                 {
                     "name": "Brahmanbaria",
                     "towns": [
-                        "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Brahmanbaria Sadar",
+                        "Kasba",
+                        "Akhaura",
+                        "Ashuganj",
+                        "Bancharampur",
+                        "Bijoynagar",
+                        "Nasirnagar",
+                        "Nabinagar",
+                        "Sarail"
                     ]
                 },
                 {
                     "name": "Chandpur",
                     "towns": [
-                        "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Chandpur Sadar",
+                        "Faridganj",
+                        "Haimchar",
+                        "Hajiganj",
+                        "Kachua",
+                        "Matlab Dakshin",
+                        "Matlab Uttar",
+                        "Shahrasti"
                     ]
                 },
                 {
                     "name": "Chittagong",
                     "towns": [
-                        "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Anwara",
+                        "Banshkhali",
+                        "Boalkhali",
+                        "Chandanaish",
+                        "Fatikchhari",
+                        "Hathazari",
+                        "Karnaphuli",
+                        "Lohagara",
+                        "Mirsharai",
+                        "Patiya",
+                        "Rangunia",
+                        "Raozan",
+                        "Sandwip",
+                        "Satkania",
+                        "Sitakunda"
                     ]
                 },
                 {
                     "name": "Comilla",
                     "towns": [
-                        "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Barura",
+                        "Brahmanpara",
+                        "Burichong",
+                        "Comilla Sadar",
+                        "Comilla Sadar Dakshin",
+                        "Chandina",
+                        "Chauddagram",
+                        "Daudkandi",
+                        "Debidwar",
+                        "Homna",
+                        "Laksam",
+                        "Lalmai",
+                        "Monohorgonj",
+                        "Meghna",
+                        "Muradnagar",
+                        "Nangalkot",
+                        "Titas"
                     ]
                 },
                 {
                     "name": "Cox's Bazar",
                     "towns": [
+                        "Chakaria",
                         "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Kutubdia",
+                        "Maheshkhali",
+                        "Ramu",
+                        "Teknaf",
+                        "Ukhia",
+                        "Pekua",
+                        "Eidgaon"
                     ]
                 },
                 {
                     "name": "Feni",
                     "towns": [
-                        "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Feni Sadar",
+                        "Daganbhuiyan",
+                        "Chhagalnaiya",
+                        "Sonagazi",
+                        "Parshuram",
+                        "Fulgazi"
                     ]
                 },
                 {
                     "name": "Khagrachhari",
                     "towns": [
-                        "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Dighinala",
+                        "Khagrachhari Sadar",
+                        "Lakshmichhari",
+                        "Mahalchhari",
+                        "Manikchhari",
+                        "Matiranga",
+                        "Panchhari",
+                        "Ramgarh",
+                        "Guimara"
                     ]
                 },
                 {
                     "name": "Lakshmipur",
                     "towns": [
-                        "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Lakshmipur Sadar",
+                        "Ramganj",
+                        "Raipur",
+                        "Ramgati",
+                        "Kamalnagar"
                     ]
                 },
                 {
                     "name": "Noakhali",
                     "towns": [
-                        "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Senbagh",
+                        "Begumganj",
+                        "Chatkhil",
+                        "Companiganj",
+                        "Noakhali Sadar",
+                        "Hatiya",
+                        "Kabirhat",
+                        "Sonaimuri",
+                        "Suborno Char",
+                        "Bhashan Char"
                     ]
                 },
                 {
                     "name": "Rangamati",
                     "towns": [
-                        "Cox's Bazar Sadar",
-                        "Teknaf"
+                        "Rangamati Sadar",
+                        "Belaichhari",
+                        "Bagaichhari",
+                        "Barkal",
+                        "Juraichhari",
+                        "Rangamati Sadar",
+                        "Belaichhari",
+                        "Bagaichhari",
+                        "Barkal",
+                        "Juraichhari"
                     ]
                 }
             ]
@@ -184,43 +330,73 @@
                 {
                     "name": "Barguna",
                     "towns": [
-                        "Rajshahi City",
-                        "Puthia"
+                        "Amtali",
+                        "Bamna",
+                        "Barguna Sadar",
+                        "Betagi",
+                        "Patharghata",
+                        "Taltali"
                     ]
                 },
                 {
                     "name": "Barishal",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Agailjhara",
+                        "Babuganj",
+                        "Bakerganj",
+                        "Banaripara",
+                        "Barisal Sadar",
+                        "Gournadi",
+                        "Hizla",
+                        "Mehendiganj",
+                        "Muladi",
+                        "Wazirpur"
                     ]
                 },
                 {
                     "name": "Bhola",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Bhola Sadar",
+                        "Daulatkhan",
+                        "Burhanuddin",
+                        "Tazumuddin",
+                        "Lalmohan",
+                        "Char Fasson",
+                        "Manpura"
                     ]
                 },
                 {
                     "name": "Jhalokati",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Jhalokati Sadar",
+                        "Kathalia",
+                        "Nalchity",
+                        "Rajapur"
                     ]
                 },
                 {
                     "name": "Patuakhali",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Dumki",
+                        "Patuakhali Sadar",
+                        "Mirzaganj",
+                        "Bauphal",
+                        "Galachipa",
+                        "Dashmina",
+                        "Rangabali",
+                        "Kalapara"
                     ]
                 },
                 {
                     "name": "Pirojpur",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Bhandaria",
+                        "Kawkhali",
+                        "Mathbaria",
+                        "Nazirpur",
+                        "Nesarabad",
+                        "Pirojpur Sadar",
+                        "Indurkani"
                     ]
                 }
             ]
@@ -231,29 +407,56 @@
                 {
                     "name": "Jamalpur",
                     "towns": [
-                        "Rajshahi City",
-                        "Puthia"
+                        "Dewanganj",
+                        "Baksiganj",
+                        "Islampur",
+                        "Jamalpur Sadar",
+                        "Madarganj",
+                        "Melandaha",
+                        "Sarishabari"
                     ]
                 },
                 {
                     "name": "Mymensingh",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Bhaluka",
+                        "Trishal",
+                        "Haluaghat",
+                        "Muktagacha",
+                        "Dhobaura",
+                        "Fulbaria",
+                        "Gaffargaon",
+                        "Gauripur",
+                        "Ishwarganj",
+                        "Mymensingh Sadar",
+                        "Nandail",
+                        "Phulpur",
+                        "Tarakanda"
                     ]
                 },
                 {
                     "name": "Netrokona",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Atpara",
+                        "Barhatta",
+                        "Durgapur",
+                        "Khaliajuri",
+                        "Kalmakanda",
+                        "Kendua",
+                        "Madan",
+                        "Mohanganj",
+                        "Netrokona Sadar",
+                        "Purbadhala"
                     ]
                 },
                 {
                     "name": "Sherpur",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Sherpur Sadar",
+                        "Nalitabari",
+                        "Sreebardi",
+                        "Jhenaigati",
+                        "Nakla"
                     ]
                 }
             ]
@@ -264,57 +467,99 @@
                 {
                     "name": "Dinajpur",
                     "towns": [
-                        "Rajshahi City",
-                        "Puthia"
+                        "Biral",
+                        "Birampur",
+                        "Birganj",
+                        "Bochaganj",
+                        "Chirirbandar",
+                        "Dinajpur Sadar",
+                        "Ghoraghat",
+                        "Hakimpur",
+                        "Kaharole",
+                        "Khansama",
+                        "Nawabganj",
+                        "Parbatipur",
+                        "Fulbari"
                     ]
                 },
                 {
                     "name": "Gaibandha",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Fulchhari",
+                        "Gaibandha",
+                        "Gobindaganj",
+                        "Palashbari",
+                        "Sadullapur",
+                        "Sundarganj",
+                        "Saghata"
                     ]
                 },
                 {
                     "name": "Kurigram",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Bhurungamari",
+                        "Char Rajibpur",
+                        "Chilmari",
+                        "Kurigram Sadar",
+                        "Nageshwari",
+                        "Phulbari",
+                        "Rajarhat",
+                        "Raomari",
+                        "Ulipur"
                     ]
                 },
                 {
                     "name": "Lalmonirhat",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Lalmonirhat Sadar",
+                        "Aditmari",
+                        "Kaliganj",
+                        "Hatibandha",
+                        "Patgram"
                     ]
                 },
                 {
                     "name": "Nilphamari",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Nilphamari Sadar",
+                        "Saidpur",
+                        "Jaldhaka",
+                        "Kishoreganj",
+                        "Domar",
+                        "Dimla"
                     ]
                 },
                 {
                     "name": "Panchagarh",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Panchagarh Sadar",
+                        "Debiganj",
+                        "Boda",
+                        "Atwari",
+                        "Tetulia"
                     ]
                 },
                 {
                     "name": "Rangpur",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Badarganj",
+                        "Mithapukur",
+                        "Gangachara",
+                        "Kaunia",
+                        "Rangpur Sadar",
+                        "Pirgacha",
+                        "Pirganj",
+                        "Taraganj"
                     ]
                 },
                 {
                     "name": "Thakurgaon",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Thakurgaon Sadar",
+                        "Baliadangi",
+                        "Haripur",
+                        "Ranisankail",
+                        "Pirganj"
                     ]
                 }
             ]
@@ -325,57 +570,108 @@
                 {
                     "name": "Rajshahi",
                     "towns": [
-                        "Rajshahi City",
-                        "Puthia"
+                        "Bagha",
+                        "Bagmara",
+                        "Charghat",
+                        "Durgapur",
+                        "Godagari",
+                        "Mohanpur",
+                        "Paba",
+                        "Puthia",
+                        "Tanore"
                     ]
                 },
                 {
                     "name": "Bogra",
                     "towns": [
+                        "Adamdighi",
                         "Bogra Sadar",
-                        "Shibganj"
+                        "Sherpur",
+                        "Dhunat",
+                        "Dhupchanchia",
+                        "Gabtali",
+                        "Kahaloo",
+                        "Nandigram",
+                        "Shajahanpur",
+                        "Sariakandi",
+                        "Shibganj",
+                        "Sonatala"
                     ]
                 },
                 {
                     "name": "Joypurhat",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Joypurhat",
+                        "Akkelpur",
+                        "Kalai",
+                        "Khetlal",
+                        "Panchbibi"
                     ]
                 },
                 {
                     "name": "Naogaon",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Atrai",
+                        "Badalgachhi",
+                        "Dhamoirhat",
+                        "Manda",
+                        "Mohadevpur",
+                        "Naogaon Sadar",
+                        "Niamatpur",
+                        "Patnitala",
+                        "Porsha",
+                        "Raninagar",
+                        "Sapahar"
                     ]
                 },
                 {
                     "name": "Natore",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Bagatipara",
+                        "Baraigram",
+                        "Gurudaspur",
+                        "Lalpur",
+                        "Naldanga",
+                        "Natore Sadar",
+                        "Singra"
                     ]
                 },
                 {
                     "name": "Chapai Nawabganj",
                     "towns": [
-                        "Bogra Sadar",
+                        "Bholahat",
+                        "Gomastapur",
+                        "Nachole",
+                        "Chapai nawabganj Sadar",
                         "Shibganj"
                     ]
                 },
                 {
                     "name": "Pabna",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Atgharia",
+                        "Bera",
+                        "Bhangura",
+                        "Chatmohar",
+                        "Faridpur",
+                        "Ishwardi",
+                        "Pabna Sadar",
+                        "Santhia",
+                        "Sujanagar"
                     ]
                 },
                 {
                     "name": "Sirajganj",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Sirajganj Sadar",
+                        "Kazipur",
+                        "Ullahpara",
+                        "Shahjadpur",
+                        "Raiganj",
+                        "Kamarkhanda",
+                        "Tarash",
+                        "Belkuchi",
+                        "Chauhali"
                     ]
                 }
             ]
@@ -386,29 +682,62 @@
                 {
                     "name": "Habiganj",
                     "towns": [
-                        "Rajshahi City",
-                        "Puthia"
+                        "Ajmiriganj",
+                        "Baniachang",
+                        "Bahubal",
+                        "Chunarughat",
+                        "Habiganj Sadar",
+                        "Lakhai",
+                        "Madhabpur",
+                        "Nabiganj",
+                        "Shaistaganj"
                     ]
                 },
                 {
                     "name": "Moulvibazar",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Moulvibazar Sadar",
+                        "Kamalganj",
+                        "Kulaura",
+                        "Rajnagar",
+                        "Sreemangal",
+                        "Barlekha",
+                        "Juri"
                     ]
                 },
                 {
                     "name": "Sunamganj",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Bishwamvarpur",
+                        "Chhatak",
+                        "Shantiganj",
+                        "Derai",
+                        "Dharamapasha",
+                        "Dowarabazar",
+                        "Jagannathpur",
+                        "Jamalganj",
+                        "Sullah",
+                        "Sunamganj Sadar",
+                        "Tahirpur",
+                        "Madhyanagar"
                     ]
                 },
                 {
                     "name": "Sylhet",
                     "towns": [
-                        "Bogra Sadar",
-                        "Shibganj"
+                        "Balaganj",
+                        "Beanibazar",
+                        "Bishwanath",
+                        "Companiganj",
+                        "Dakshin Surma",
+                        "Fenchuganj",
+                        "Golapganj",
+                        "Gowainghat",
+                        "Jaintiapur",
+                        "Kanaighat",
+                        "Osmani Nagar",
+                        "Sylhet Sadar",
+                        "Zakiganj"
                     ]
                 }
             ]
@@ -419,71 +748,110 @@
                 {
                     "name": "Bagerhat",
                     "towns": [
-                        "Khulna City",
-                        "Jessore"
+                        "Bagerhat Sadar",
+                        "Chitalmari",
+                        "Fakirhat",
+                        "Kachua",
+                        "Mollahat",
+                        "Mongla",
+                        "Morrelganj",
+                        "Rampal",
+                        "Sarankhola"
                     ]
                 },
                 {
                     "name": "Chuadanga",
                     "towns": [
-                        "Satkhira Sadar",
-                        "Tala"
+                        "Chuadanga Sadar",
+                        "Alamdanga",
+                        "Jibannagar",
+                        "Damurhuda"
                     ]
                 },
                 {
                     "name": "Jashore",
                     "towns": [
-                        "Satkhira Sadar",
-                        "Tala"
+                        "Abhaynagar",
+                        "Bagherpara",
+                        "Chaugachha",
+                        "Jessore Sadar",
+                        "Jhikargachha",
+                        "Keshabpur",
+                        "Manirampur",
+                        "Sharsha"
                     ]
                 },
                 {
                     "name": "Jhenaidah",
                     "towns": [
-                        "Satkhira Sadar",
-                        "Tala"
+                        "Jhenaidah Sadar",
+                        "Maheshpur",
+                        "Kaliganj",
+                        "Kotchandpur",
+                        "Shailkupa",
+                        "Harinakunda"
                     ]
                 },
                 {
                     "name": "Khulna",
                     "towns": [
-                        "Satkhira Sadar",
-                        "Tala"
+                        "Dumuria",
+                        "Batiaghata",
+                        "Dacope",
+                        "Phultala",
+                        "Dighalia",
+                        "Koyra",
+                        "Terokhada",
+                        "Rupsha",
+                        "Paikgachha"
                     ]
                 },
                 {
                     "name": "Kushtia",
                     "towns": [
-                        "Satkhira Sadar",
-                        "Tala"
+                        "Bheramara",
+                        "Daulatpur",
+                        "Khoksa",
+                        "Kumarkhali",
+                        "Kushtia Sadar",
+                        "Mirpur"
                     ]
                 },
                 {
                     "name": "Magura",
                     "towns": [
-                        "Satkhira Sadar",
-                        "Tala"
+                        "Magura Sadar",
+                        "Mohammadpur",
+                        "Shalikha",
+                        "Sreepur"
                     ]
                 },
                 {
                     "name": "Meherpur",
                     "towns": [
-                        "Satkhira Sadar",
-                        "Tala"
+                        "Gangni",
+                        "Meherpur Sadar",
+                        "Mujibnagar"
                     ]
                 },
                 {
                     "name": "Narail",
                     "towns": [
-                        "Satkhira Sadar",
-                        "Tala"
+                        "Narail Sadar",
+                        "Kalia",
+                        "Lohagara"
                     ]
                 },
                 {
                     "name": "Satkhira",
                     "towns": [
                         "Satkhira Sadar",
-                        "Tala"
+                        "Assasuni",
+                        "Debhata",
+                        "Tala",
+                        "Kalaroa",
+                        "Kaliganj",
+                        "Shyamnagar"
                     ]
                 }
             ]

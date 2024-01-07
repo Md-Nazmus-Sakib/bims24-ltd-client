@@ -4,11 +4,11 @@ import District from './District';
 
 const FindInDistricts = () => {
     const { districtName } = useParams();
-    console.log(districtName)
+    // console.log(districtName)
     const [locationName, setLocationName] = useState([]);
-    console.log(locationName.divisions)
+    // console.log(locationName.divisions)
     const districts = locationName?.divisions?.find(location => location.name === districtName);
-    console.log(districts?.districts)
+    // console.log(districts?.districts)
 
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const FindInDistricts = () => {
 
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-12'>
+        <div className='my-12 bg-black'>
             {
                 districts?.districts && districts.districts.map((dis, index) => <District key={index} dis={dis}></District>)
             }

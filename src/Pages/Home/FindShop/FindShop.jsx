@@ -83,7 +83,7 @@ const FindShop = () => {
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Barisal</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <Link to={'/district/Barisal'}> <button className="card-btn text-black ">Barisal</button></Link>
+                                <Link to={'/division/Barisal'}> <button className="card-btn text-black ">Barisal</button></Link>
                             </div>
 
                         </SwiperSlide>
@@ -92,7 +92,7 @@ const FindShop = () => {
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Chittagong</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <Link to={'/district/Chittagong'}> <button className="card-btn text-black ">Chittagong</button></Link>
+                                <Link to={'/division/Chittagong'}> <button className="card-btn text-black ">Chittagong</button></Link>
                             </div>
 
                         </SwiperSlide>
@@ -101,7 +101,7 @@ const FindShop = () => {
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
                                 <h1 className='text-xl text-white  mt-6'> Dhaka</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <Link to={'/district/Dhaka'}> <button className="card-btn text-black ">Dhaka</button></Link>
+                                <Link to={'/division/Dhaka'}> <button className="card-btn text-black ">Dhaka</button></Link>
                             </div>
 
                         </SwiperSlide>
@@ -110,7 +110,7 @@ const FindShop = () => {
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Khulna</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <Link to={'/district/Khulna'}> <button className="card-btn text-black ">Khulna</button></Link>
+                                <Link to={'/division/Khulna'}> <button className="card-btn text-black ">Khulna</button></Link>
                             </div>
 
                         </SwiperSlide>
@@ -119,7 +119,7 @@ const FindShop = () => {
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Rajshahi</h1>
                                 <div className="overlay rounded-3xl"></div>
-                                <Link to={'/district/Rajshahi'}> <button className="card-btn text-black ">Rajshahi</button></Link>
+                                <Link to={'/division/Rajshahi'}> <button className="card-btn text-black ">Rajshahi</button></Link>
                             </div>
 
                         </SwiperSlide>
@@ -128,7 +128,7 @@ const FindShop = () => {
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Rangpur</h1>
                                 <div className="overlay rounded-3xl "></div>
-                                <Link to={'/district/Rangpur'}> <button className="card-btn text-black ">Rangpur</button></Link>
+                                <Link to={'/division/Rangpur'}> <button className="card-btn text-black ">Rangpur</button></Link>
                             </div>
 
                         </SwiperSlide>
@@ -137,7 +137,7 @@ const FindShop = () => {
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
                                 <h1 className='text-xl text-white  mt-6'> Mymensingh</h1>
                                 <div className="overlay rounded-3xl "></div>
-                                <Link to={'/district/Mymensingh'}> <button className="card-btn text-black ">Mymensingh</button></Link>
+                                <Link to={'/division/Mymensingh'}> <button className="card-btn text-black ">Mymensingh</button></Link>
                             </div>
 
                         </SwiperSlide>
@@ -146,7 +146,7 @@ const FindShop = () => {
                                 <img className=' h-full rounded-3xl relative' src={img1} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Sylhet</h1>
                                 <div className="overlay rounded-3xl "></div>
-                                <Link to={'/district/Sylhet'}> <button className="card-btn text-black ">Sylhet</button></Link>
+                                <Link to={'/division/Sylhet'}> <button className="card-btn text-black ">Sylhet</button></Link>
                             </div>
 
                         </SwiperSlide>
