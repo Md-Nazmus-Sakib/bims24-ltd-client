@@ -3,13 +3,35 @@ import { NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import './Navbar.css'
 import { FaSearch } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 const Navbar = () => {
-    const { searchField, setSearchField } = useAuth();
+    const { searchField, setSearchField, user, logOut, loading } = useAuth();
     const cityNameRef = useRef(null);
     const handleButtonClick = () => {
         const cityName = cityNameRef.current.value;
         setSearchField(cityName)
     };
+
+
+
+    const handelLogOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Successfully Log Out',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+    }
+
+    if (loading) {
+        return <div className='flex justify-center items-center w-full h-screen'>
+            <span className="loading loading-spinner loading-lg text-secondary"></span>
+        </div>
+    }
     const routeLink = <>
         <div className="search-fiend">
             <input placeholder="Type City Name" type="text" ref={cityNameRef} />
@@ -18,7 +40,11 @@ const Navbar = () => {
 
         <NavLink to={'/'}> <li>Home</li></NavLink>
         <NavLink> <li>Contact</li></NavLink>
-        <NavLink to={'/login'}> <li>Login</li></NavLink>
+        {
+            user ? <li><NavLink onClick={handelLogOut}>LogOut</NavLink></li> :
+                <NavLink to={'/login'}> <li>Login</li></NavLink>
+        }
+
 
 
     </>

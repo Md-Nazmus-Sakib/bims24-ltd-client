@@ -1,10 +1,74 @@
-import React, { createContext } from 'react';
+import React, { createContext, useEffect } from 'react';
 import { useState } from 'react';
-export const AuthContext = createContext(null)
+import { app } from '../Firebase/firebase.config';
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+export const AuthContext = createContext(null);
+
+const auth = getAuth(app);
+
+
+
 const AuthProvider = ({ children }) => {
     const [searchField, setSearchField] = useState('');
     console.log(searchField)
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const googleProvider = new GoogleAuthProvider();
+
+    // create user 
+
+    const createUser = (email, password) => {
+        setLoading(true)
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+
+    // updateUserProfile 
+
+    // const updateUserProfile = (name, photo) => {
+    //     setLoading(true);
+    //     return updateProfile(auth.currentUser, {
+    //         displayName: name, photoURL: photo
+    //     })
+    // }
+    // sign in 
+    const signIn = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+
+    // googleSignIn 
+
+    const googleSignIn = () => {
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider)
+    }
+    // logOut
+
+    const logOut = () => {
+        setLoading(true)
+        return signOut(auth)
+    }
+    // state change 
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+            setLoading(false)
+        });
+        return () => {
+            unsubscribe();
+        }
+
+    }, [])
+
     const authInfo = {
+        user,
+        loading,
+        setLoading,
+        createUser,
+        signIn,
+        logOut,
+        // updateUserProfile,
+        googleSignIn,
         searchField,
         setSearchField
     }

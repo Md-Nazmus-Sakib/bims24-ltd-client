@@ -1,35 +1,60 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAuth from '../../../Hooks/useAuth';
 
 const Register = () => {
     const { user, loading, createUser, signIn, logOut, setLoading } = useAuth();
-    const handelRegister = (e) => {
-        e.preventDefault();
-        const form = e.target;
+    const navigate = useNavigate();
+    const [error, setError] = useState('');
+    const handelRegister = (event) => {
+        event.preventDefault();
+        const form = event.target;
         const name = form.name.value;
+
         const email = form.email.value;
         const password = form.password.value;
+        setError('')
+        if (password.length < 6) {
+            return setError('password must be gater than 6 character or longer.')
+        }
+        else if (!/^(?=.*[A-Z]).*$/.test(password)) {
+            return setError('password must be one upper case')
+        }
+        else if (! /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).*$/.test(password)) {
+            return setError('password must be one special Character')
+        }
 
-        signIn(email, password)
+        createUser(email, password)
             .then(result => {
-                const displayUser = result.user;
-                // console.log(displayUser)
-                navigate('/')
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                form.reset();
                 Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Your work has been saved",
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'User Register Successfully',
                     showConfirmButton: false,
                     timer: 1500
-                });
+                })
+                setLoading(false)
+                navigate('/')
+                // updateUserProfile(name, photo)
+                //     .then(() => {
 
+
+                //     })
+                // .catch(error => {
+
+                //     setError(error.message)
+                // })
             })
             .catch(error => {
-                // setLoading(false)
-                console.log(error.message)
+
+                setError(error.message)
             })
+
+
     }
 
     return (
@@ -59,6 +84,9 @@ const Register = () => {
                         </label>
                         <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                     </div>
+                    <label className="label">
+                        {error && <p className='text-red-500 rounded-md font-bold bg-white p-2'>{error}</p>}
+                    </label>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Login</button>
                     </div>
