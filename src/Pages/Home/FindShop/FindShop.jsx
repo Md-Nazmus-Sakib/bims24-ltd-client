@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Lottie from "lottie-react";
 import bannerBgDown from "../../../../public/scene1-2023-12-24.json";
 import bannerBg from "../../../../public/bannerBg.json";
@@ -13,8 +13,17 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import { Link } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 
 const FindShop = () => {
+
+    const { searchField, setSearchField } = useAuth();
+    const cityNameRef = useRef(null);
+    const handleButtonClick = () => {
+        const cityName = cityNameRef.current.value;
+        setSearchField(cityName)
+    };
+
     let settings = {
         slidesToShow: 3,
         cssEase: "linear",
@@ -73,9 +82,9 @@ const FindShop = () => {
                                 </div>
 
                             </div>
-                            <input type="text" autoComplete="off" placeholder="Type City Name" name="text" className="input mt-8 w-full text-xl font-extrabold text-black" />
+                            <input type="text" autoComplete="off" placeholder="Type City Name" ref={cityNameRef} name="text" className="input mt-8 w-full text-xl font-extrabold text-black" />
                             <button className="box-search my-8 w-full">
-                                <p className="text-button text-black">Search </p>
+                                <p className="text-button text-black" onClick={handleButtonClick}>Search </p>
                             </button>
                         </div>
 

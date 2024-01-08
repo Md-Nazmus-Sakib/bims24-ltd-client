@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-
+import useAuth from '../../../Hooks/useAuth';
+import './Navbar.css'
+import { FaSearch } from 'react-icons/fa';
 const Navbar = () => {
-
+    const { searchField, setSearchField } = useAuth();
+    const cityNameRef = useRef(null);
+    const handleButtonClick = () => {
+        const cityName = cityNameRef.current.value;
+        setSearchField(cityName)
+    };
     const routeLink = <>
+        <div className="search-fiend">
+            <input placeholder="Type City Name" type="text" ref={cityNameRef} />
+            <button onClick={handleButtonClick} type="submit" className='h-full'><FaSearch></FaSearch></button>
+        </div>
+
         <NavLink to={'/'}> <li>Home</li></NavLink>
         <NavLink> <li>Contact</li></NavLink>
-        <NavLink> <li>About</li></NavLink>
-        <NavLink> <li>Home</li></NavLink>
+        <NavLink to={'/login'}> <li>Login</li></NavLink>
+
 
     </>
     return (
@@ -25,8 +37,8 @@ const Navbar = () => {
                 </div>
                 <a className="btn btn-ghost text-xl font-extrabold">Bims24Ltd</a>
             </div>
-            <div className="navbar-end hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 font-bold gap-4 md:px-20">
+            <div className="navbar-end hidden lg:flex justify-center items-center text-center">
+                <ul className="menu menu-horizontal px-1 font-bold gap-4 md:pr-20">
                     {
                         routeLink
                     }

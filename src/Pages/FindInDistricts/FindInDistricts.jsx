@@ -14,7 +14,7 @@ const FindInDistricts = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('../../../public/locationData.json');
+                const response = await fetch('/locationData.json');
                 const data = await response.json();
                 setLocationName(data);
             } catch (error) {
