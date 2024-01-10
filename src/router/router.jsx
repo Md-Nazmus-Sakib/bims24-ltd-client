@@ -6,6 +6,7 @@ import FindInDistricts from "../Pages/FindInDistricts/FindInDistricts";
 import FindTown from "../Pages/FindTown/FindTown";
 import Login from "../Pages/Login/Login/Login";
 import Register from "../Pages/Login/Register/Register";
+import AddShopLocation from "../Pages/AddShopLocation/AddShopLocation";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>,
+            },
+            {
+                path: "/addShop",
+                element: <AddShopLocation></AddShopLocation>,
             },
             {
                 path: "/register",

@@ -82,7 +82,7 @@ const FindShop = () => {
                                 </div>
 
                             </div>
-                            <input type="text" autoComplete="off" placeholder="Type City Name" ref={cityNameRef} name="text" className="input mt-8 w-full text-xl font-extrabold text-black" />
+                            <input type="text" autoComplete="off" placeholder="Type City Name" ref={cityNameRef} name="text" className="input-search mt-8 w-full text-xl font-extrabold text-black" />
                             <button className="box-search my-8 w-full">
                                 <p className="text-button text-black" onClick={handleButtonClick}>Search </p>
                             </button>

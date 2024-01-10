@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAuth from '../../../Hooks/useAuth';
+import useAxiosPublic from '../../../Hooks/useAxiosPublic';
 
 const Register = () => {
     const { user, loading, createUser, signIn, logOut, setLoading } = useAuth();
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
     const [error, setError] = useState('');
     const handelRegister = (event) => {
         event.preventDefault();
@@ -29,28 +31,34 @@ const Register = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
-                form.reset();
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'User Register Successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-                setLoading(false)
-                navigate('/')
-                // updateUserProfile(name, photo)
-                //     .then(() => {
-
-
-                //     })
-                // .catch(error => {
-
-                //     setError(error.message)
-                // })
+                const userInfo = {
+                    name,
+                    email,
+                    role: 'user'
+                }
+                axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                        if (res.data.insertedId) {
+                            // console.log('user added to the database')
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'User created successfully.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                            setLoading(false)
+                            form.reset();
+                            navigate('/')
+                        }
+                        else {
+                            setLoading(false)
+                            navigate('/')
+                        }
+                    })
             })
             .catch(error => {
-
+                setLoading(false)
                 setError(error.message)
             })
 
@@ -88,7 +96,7 @@ const Register = () => {
                         {error && <p className='text-red-500 rounded-md font-bold bg-white p-2'>{error}</p>}
                     </label>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn btn-primary">Register</button>
                     </div>
                 </form>
                 <div className='card-body py-0'>

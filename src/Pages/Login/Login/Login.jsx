@@ -5,7 +5,7 @@ import useAuth from '../../../Hooks/useAuth';
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const { user, loading, createUser, signIn, logOut, setLoading } = useAuth()
+    const { user, loading, createUser, signIn, logOut, setLoading } = useAuth();
     const navigate = useNavigate();
 
     const handelSignIn = (e) => {
@@ -18,7 +18,7 @@ const Login = () => {
             .then(result => {
                 const displayUser = result.user;
                 // console.log(displayUser)
-                navigate('/')
+
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
@@ -26,7 +26,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-
+                navigate('/')
             })
             .catch(error => {
                 // setLoading(false)

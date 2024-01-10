@@ -332,9 +332,9 @@
 }
 
 
-/* input field  */
+/* input-search field  */
 
-.input {
+.input-search {
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
     /* Chrome 10-25, Safari 5.1-6 */
@@ -356,7 +356,7 @@
         -23px -23px 46px #ffffff;
 }
 
-.input::placeholder {
+.input-search::placeholder {
     color: rgb(255, 255, 255);
 }
 

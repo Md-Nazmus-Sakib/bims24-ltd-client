@@ -10,7 +10,7 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
     const [searchField, setSearchField] = useState('');
-    console.log(searchField)
+    // console.log(searchField)
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
@@ -30,6 +30,7 @@ const AuthProvider = ({ children }) => {
     //         displayName: name, photoURL: photo
     //     })
     // }
+
     // sign in 
     const signIn = (email, password) => {
         setLoading(true);
@@ -38,10 +39,11 @@ const AuthProvider = ({ children }) => {
 
     // googleSignIn 
 
-    const googleSignIn = () => {
-        setLoading(true);
-        return signInWithPopup(auth, googleProvider)
-    }
+    // const googleSignIn = () => {
+    //     setLoading(true);
+    //     return signInWithPopup(auth, googleProvider)
+    // }
+
     // logOut
 
     const logOut = () => {
@@ -68,7 +70,7 @@ const AuthProvider = ({ children }) => {
         signIn,
         logOut,
         // updateUserProfile,
-        googleSignIn,
+
         searchField,
         setSearchField
     }
