@@ -7,6 +7,7 @@ import FindTown from "../Pages/FindTown/FindTown";
 import Login from "../Pages/Login/Login/Login";
 import Register from "../Pages/Login/Register/Register";
 import AddShopLocation from "../Pages/AddShopLocation/AddShopLocation";
+import SearchShop from "../Pages/SearchShop/SearchShop";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
             {
                 path: "/addShop",
                 element: <AddShopLocation></AddShopLocation>,
+            },
+            {
+                path: "/searchShop",
+                element: <SearchShop></SearchShop>,
             },
             {
                 path: "/register",

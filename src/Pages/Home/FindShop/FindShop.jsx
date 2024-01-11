@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Lottie from "lottie-react";
 import bannerBgDown from "../../../../public/scene1-2023-12-24.json";
 import bannerBg from "../../../../public/bannerBg.json";
@@ -14,15 +14,48 @@ import Slider from "react-slick";
 
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
+import useAllTowns from '../../../Hooks/useAllTowns';
 
 const FindShop = () => {
 
     const { searchField, setSearchField } = useAuth();
-    const cityNameRef = useRef(null);
-    const handleButtonClick = () => {
-        const cityName = cityNameRef.current.value;
-        setSearchField(cityName)
+
+    // console.log(searchField)
+    const [suggestions, setSuggestions] = useState([]);
+    // console.log(suggestions)
+    const allTownName = useAllTowns();
+    const inputRef = useRef();
+
+    const handleInputChange = (event) => {
+        const value = event.target.value;
+        setSearchField(value);
+        // // Filter suggestions based on the typed text
+        const matchingTowns = allTownName.filter((town) =>
+            town.toLowerCase().startsWith(value.toLowerCase())
+        );
+        setSuggestions(matchingTowns);;
+
     };
+
+    const handleSuggestionClick = (town) => {
+        setSearchField(town);
+        setSuggestions([]);
+    };
+
+    const handleOutsideClick = (event) => {
+        if (inputRef.current && !inputRef.current.contains(event.target) && !inputRef.current.contains(document.activeElement)) {
+            setSuggestions([]);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
+
 
     let settings = {
         slidesToShow: 3,
@@ -82,10 +115,27 @@ const FindShop = () => {
                                 </div>
 
                             </div>
-                            <input type="text" autoComplete="off" placeholder="Type City Name" ref={cityNameRef} name="text" className="input-search mt-8 w-full text-xl font-extrabold text-black" />
-                            <button className="box-search my-8 w-full">
-                                <p className="text-button text-black" onClick={handleButtonClick}>Search </p>
-                            </button>
+                            <div ref={inputRef}>
+                                <input type="text" autoComplete="off" placeholder="Type City Name" name="text" className="input-search mt-8 w-full text-xl font-extrabold text-black" value={searchField}
+                                    onChange={handleInputChange} />
+                                {suggestions.length > 0 && (
+                                    <ul className="mt-2 border rounded-md p-2 absolute z-10 bg-white shadow-md text-left h-60 overflow-y-auto w-full">
+                                        {suggestions.map((town, index) => (
+                                            <li
+                                                key={index}
+                                                className="cursor-pointer text-black py-1 hover:bg-gray-200"
+                                                onClick={() => handleSuggestionClick(town)}
+                                            >
+                                                {town}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                                <Link to={'/searchShop'}>   <button className="box-search my-8 w-full">
+                                    <p className="text-button text-black" >Search </p>
+                                </button></Link>
+
+                            </div>
                         </div>
 
                     </div>

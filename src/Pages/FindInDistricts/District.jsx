@@ -1,6 +1,7 @@
 import React from 'react';
 import './District.css'
 import useAuth from '../../Hooks/useAuth';
+import { Link } from 'react-router-dom';
 
 
 
@@ -31,10 +32,10 @@ const District = ({ dis }) => {
                     dis?.towns?.map((town, index) => <div key={index} className=' m-4' >
 
 
-                        <button onClick={() => setSearchField(town)} className='button-town '>
+                        <Link to={'/searchShop'}>  <button onClick={() => setSearchField(town)} className='button-town '>
                             <span className='text-2xl font-bold mx-2'> {town}
                             </span>
-                        </button>
+                        </button></Link>
 
                     </div>)
                 }

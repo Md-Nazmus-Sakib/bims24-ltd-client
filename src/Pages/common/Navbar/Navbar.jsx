@@ -1,16 +1,48 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import './Navbar.css'
 import { FaSearch } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import useAllTowns from '../../../Hooks/useAllTowns';
 const Navbar = () => {
     const { searchField, setSearchField, user, logOut, loading } = useAuth();
-    const cityNameRef = useRef(null);
-    const handleButtonClick = () => {
-        const cityName = cityNameRef.current.value;
-        setSearchField(cityName)
+    // console.log(searchField)
+    const [suggestions, setSuggestions] = useState([]);
+    // console.log(suggestions)
+    const allTownName = useAllTowns();
+    const inputRef = useRef();
+
+    const handleInputChange = (event) => {
+        const value = event.target.value;
+        setSearchField(value);
+        // // Filter suggestions based on the typed text
+        const matchingTowns = allTownName.filter((town) =>
+            town.toLowerCase().startsWith(value.toLowerCase())
+        );
+        setSuggestions(matchingTowns);;
+
     };
+
+    const handleSuggestionClick = (town) => {
+        setSearchField(town);
+        setSuggestions([]);
+    };
+
+    const handleOutsideClick = (event) => {
+        if (inputRef.current && !inputRef.current.contains(event.target) && !inputRef.current.contains(document.activeElement)) {
+            setSuggestions([]);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
+
 
 
 
@@ -29,13 +61,30 @@ const Navbar = () => {
 
     if (loading) {
         return <div className='flex justify-center items-center w-full h-screen'>
-            <span className="loading loading-spinner loading-lg text-secondary"></span>
+            <span className="loading loading-bars loading-lg text-secondary"></span>
         </div>
     }
     const routeLink = <>
-        <div className="search-fiend">
-            <input placeholder="Type City Name" type="text" ref={cityNameRef} />
-            <button onClick={handleButtonClick} type="submit" className='h-full'><FaSearch></FaSearch></button>
+        <div className="search-fiend" ref={inputRef}>
+            <input type="text"
+                placeholder="Type to search..."
+                className="w-full border rounded-md p-2"
+                value={searchField}
+                onChange={handleInputChange} />
+            {suggestions.length > 0 && (
+                <ul className="mt-2 border rounded-md p-2 absolute z-10 bg-white shadow-md text-left h-60 overflow-y-auto w-full">
+                    {suggestions.map((town, index) => (
+                        <li
+                            key={index}
+                            className="cursor-pointer py-1 hover:bg-gray-200"
+                            onClick={() => handleSuggestionClick(town)}
+                        >
+                            {town}
+                        </li>
+                    ))}
+                </ul>
+            )}
+            <Link to={'/searchShop'}> <button type="submit" className='h-full'><FaSearch></FaSearch></button></Link>
         </div>
         <li><NavLink to={'/'}> Home</NavLink></li>
         <li><NavLink to={'/contact'}> Contact</NavLink></li>
