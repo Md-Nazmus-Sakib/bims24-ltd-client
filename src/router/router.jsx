@@ -8,6 +8,7 @@ import Login from "../Pages/Login/Login/Login";
 import Register from "../Pages/Login/Register/Register";
 import AddShopLocation from "../Pages/AddShopLocation/AddShopLocation";
 import SearchShop from "../Pages/SearchShop/SearchShop";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>,
+            },
+            {
+                path: "/dashboard",
+                element: <Dashboard></Dashboard>,
             },
             {
                 path: "/division/:districtName",

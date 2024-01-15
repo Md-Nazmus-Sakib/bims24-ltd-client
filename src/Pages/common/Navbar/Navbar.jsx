@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import './Navbar.css'
-import { FaSearch } from 'react-icons/fa';
+import { FaArrowDown, FaChevronDown, FaSearch } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAllTowns from '../../../Hooks/useAllTowns';
 const Navbar = () => {
@@ -95,6 +95,16 @@ const Navbar = () => {
         {
             user ? <li onClick={handelLogOut}><Link>LogOut</Link> </li> :
                 <li><NavLink to={'/login'}> Login</NavLink></li>
+        }
+        {
+            user && <div className="dropdown dropdown-end">
+                <li tabIndex={0} role="button" ><Link ><FaChevronDown></FaChevronDown></Link></li>
+                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li>  <NavLink to={'/dashboard'}>Dashboard</NavLink ></li>
+
+                </ul>
+            </div>
+
         }
 
 
