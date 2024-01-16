@@ -9,6 +9,7 @@ import Register from "../Pages/Login/Register/Register";
 import AddShopLocation from "../Pages/AddShopLocation/AddShopLocation";
 import SearchShop from "../Pages/SearchShop/SearchShop";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import AllShop from "../Pages/Dashboard/AllShop/AllShop";
 
 export const router = createBrowserRouter([
     {
@@ -39,6 +40,12 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <Dashboard></Dashboard>,
+                children: [
+                    {
+                        path: '/dashboard/allShop',
+                        element: <AllShop></AllShop>
+                    }
+                ]
             },
             {
                 path: "/division/:districtName",
