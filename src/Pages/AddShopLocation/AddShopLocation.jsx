@@ -54,7 +54,7 @@ const AddShopLocation = () => {
         if (!selectedDivision || !selectedDistrict || !selectedTown) {
             return setError('Division ,District  and Upazila must required.')
         }
-        const shopInfo = { shopName, ownerName, email, mobile, alterMobile, address, notes, selectedDivision, selectedDistrict, selectedTown, userEmail: user?.email }
+        const shopInfo = { shopName, ownerName, email, mobile, alterMobile, address, notes, selectedDivision, selectedDistrict, selectedTown, userEmail: user?.email, status: 'Pending', addDate: new Date }
         // console.log(shopInfo)
         axiosPublic.post('/shops', shopInfo)
             .then(res => {

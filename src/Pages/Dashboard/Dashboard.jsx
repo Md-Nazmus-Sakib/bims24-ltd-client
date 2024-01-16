@@ -48,8 +48,8 @@ const Dashboard = () => {
 
     </>
     return (
-        <div className=' md:flex relative '>
-            <div className={``}>
+        <div className=' md:flex relative overflow-auto '>
+            <div className={`absolute top-0 md:relative`}>
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
 
                 <div className={`bg-base-200 w-full md:w-[96px]  ${isOpen ? 'hidden' : 'block '}`}>
@@ -88,7 +88,7 @@ const Dashboard = () => {
                 </div>
 
             </div>
-            <div className='min-h-screen bg-black p-8'>
+            <div className='min-h-screen bg-black w-full p-8'>
                 <Outlet></Outlet>
             </div>
         </div>
