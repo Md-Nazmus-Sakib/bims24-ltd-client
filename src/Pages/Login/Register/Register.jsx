@@ -12,9 +12,9 @@ const Register = () => {
     const handelRegister = (event) => {
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
+        const name = form.name1.value;
 
-        const email = form.email.value;
+        const email = form.email1.value;
         const password = form.password.value;
         setError('')
         if (password.length < 6) {
@@ -78,13 +78,13 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" name='name' placeholder="Your Name" className="input input-bordered" required />
+                        <input type="text" name='name1' placeholder="Your Name" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
-                        <label className="label">
+                        <label className="label" >
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                        <input type="email" name='email1' placeholder="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">

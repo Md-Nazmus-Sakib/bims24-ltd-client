@@ -84,7 +84,11 @@ const ShopRequest = () => {
         })
     }
 
-
+    if (requestShopsLoading) {
+        return <div className='flex justify-center items-center w-full h-screen'>
+            <span className="loading loading-bars loading-lg text-secondary"></span>
+        </div>
+    }
     return (
         <div>
             <div className='  text-center uppercase text-xl font-semibold px-4 my-12 text-white'>

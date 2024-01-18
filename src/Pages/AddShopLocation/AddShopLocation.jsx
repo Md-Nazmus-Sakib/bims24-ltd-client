@@ -97,36 +97,36 @@ const AddShopLocation = () => {
             <form onSubmit={handelAddShop} className="card-body">
                 <div className='md:flex w-full  gap-4'>
                     <div className="form-control w-full">
-                        <label className="label">
+                        <label className="label" htmlFor="shopName">
                             <span className="label-text text-xl text-white font-semibold">Shop Name *</span>
                         </label>
-                        <input type="text" name='shopName' placeholder="Shop Name" className="input input-bordered font-semibold text-xl" required />
+                        <input type="text" name='shopName' placeholder="Shop Name" id='shopName' className="input input-bordered font-semibold text-xl" required />
                     </div>
                     <div className="form-control w-full">
-                        <label className="label">
+                        <label className="label" htmlFor="ownerName">
                             <span className="label-text text-xl text-white font-semibold">Owner Name *</span>
                         </label>
-                        <input type="text" name='ownerName' placeholder="Owner Name" className="input input-bordered font-semibold text-xl" required />
+                        <input type="text" name='ownerName' placeholder="Owner Name" id='ownerName' className="input input-bordered font-semibold text-xl" required />
                     </div>
                 </div>
                 <div className='lg:flex w-full  gap-4'>
                     <div className="form-control w-full">
-                        <label className="label">
+                        <label className="label" htmlFor="email1">
                             <span className="label-text text-xl text-white font-semibold">Email</span>
                         </label>
-                        <input type="email" name='email' placeholder="Email" className="input input-bordered font-semibold text-xl" />
+                        <input type="email" name='email' placeholder="Email" id='email1' className="input input-bordered font-semibold text-xl" />
                     </div>
                     <div className="form-control w-full">
-                        <label className="label">
+                        <label className="label" htmlFor="mobileShop">
                             <span className="label-text text-xl text-white font-semibold">Mobile *</span>
                         </label>
-                        <input type='tel' name='mobile' placeholder="01xxxxxxxxx" className="input input-bordered font-semibold text-xl" maxLength="11" pattern="[0-9]{11}" required />
+                        <input type='tel' name='mobile' placeholder="01xxxxxxxxx" id='mobileShop' className="input input-bordered font-semibold text-xl" maxLength="11" pattern="[0-9]{11}" required />
                     </div>
                     <div className="form-control w-full">
-                        <label className="label">
+                        <label className="label" htmlFor="alterMobile">
                             <span className="label-text text-xl text-white font-semibold">Alternative Mobile</span>
                         </label>
-                        <input type='tel' name='alterMobile' placeholder="01xxxxxxxxx" className="input input-bordered font-semibold text-xl" maxLength="11" pattern="[0-9]{11}" />
+                        <input type='tel' name='alterMobile' id='alterMobile' placeholder="01xxxxxxxxx" className="input input-bordered font-semibold text-xl" maxLength="11" pattern="[0-9]{11}" />
                     </div>
                 </div>
                 {/* location start  */}
@@ -169,17 +169,17 @@ const AddShopLocation = () => {
                 {/* locattion end  */}
                 <div className='md:flex w-full  gap-4'>
                     <div className="form-control w-full">
-                        <label className="label">
+                        <label className="label" htmlFor="addressShop">
                             <span className="label-text text-xl text-white font-semibold">Address</span>
                         </label>
-                        <textarea type='text' name='address' className="textarea textarea-bordered font-semibold text-xl h-24" placeholder="Full Address"></textarea>
+                        <textarea type='text' name='address' id='addressShop' className="textarea textarea-bordered font-semibold text-xl h-24" placeholder="Full Address"></textarea>
 
                     </div>
                     <div className="form-control w-full">
-                        <label className="label">
+                        <label className="label" htmlFor="notesShop">
                             <span className="label-text text-xl text-white font-semibold">Addition Nots</span>
                         </label>
-                        <textarea type='text' name='notes' className="textarea textarea-bordered font-semibold text-xl h-24" placeholder="Additional Information"></textarea>
+                        <textarea type='text' name='notes' id='notesShop' className="textarea textarea-bordered font-semibold text-xl h-24" placeholder="Additional Information"></textarea>
 
                     </div>
                 </div>

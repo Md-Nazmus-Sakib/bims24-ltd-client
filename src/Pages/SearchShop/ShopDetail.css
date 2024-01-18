@@ -30,7 +30,7 @@
 
 .red-btn:after {
     content: "";
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../assets/Image/shop.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     position: absolute;
     z-index: -1;
     left: -20%;

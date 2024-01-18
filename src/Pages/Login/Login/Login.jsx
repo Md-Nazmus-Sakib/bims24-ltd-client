@@ -45,7 +45,7 @@ const Login = () => {
                 <h1 className="text-5xl font-bold">Login now!</h1>
                 <form onSubmit={handelSignIn} className="card-body">
                     <div className="form-control">
-                        <label className="label">
+                        <label className="label" >
                             <span className="label-text">Email</span>
                         </label>
                         <input type="email" name='email' placeholder="email" className="input input-bordered" required />

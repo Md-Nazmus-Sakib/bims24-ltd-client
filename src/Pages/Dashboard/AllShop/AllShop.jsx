@@ -82,10 +82,11 @@ const AllShop = () => {
                             <tr className='md:text-xl text-white'>
                                 <th>#</th>
                                 <th>Shop Name</th>
+                                <th>Owner Info</th>
                                 <th>Mobile</th>
                                 <th>Address</th>
                                 <th>Status</th>
-                                <th>Action</th>
+
                             </tr>
                         </thead>
                         <tbody className='text-slate-200'>
@@ -94,9 +95,10 @@ const AllShop = () => {
                             >
                                 <td >{calculateIndex(index)} </td>
                                 <td> <h1>{shop.shopName}</h1>  </td>
+                                <td> <h1>{shop.ownerName}</h1>  </td>
                                 <td>{shop?.mobile} </td>
                                 <td>{shop?.address}, {shop?.selectedTown}, {shop?.selectedDistrict}.</td>
-                                <td>Active</td>
+
                                 <td className='text-right'>   <button onClick={() => handelDelete(shop?._id)} className='text-right'><FaTrash className='text-red-600 w-6 hover-table'></FaTrash></button></td>
 
                             </tr>)}
@@ -107,7 +109,7 @@ const AllShop = () => {
                 </div>
             </div>
 
-            <div className='join flex justify-center items-center my-12'>
+            <div className='join flex flex-wrap gap-y-4 justify-center items-center my-12'>
                 <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} className="join-item btn">
                     Prev
                 </button>

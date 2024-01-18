@@ -5,6 +5,8 @@ import './Navbar.css'
 import { FaArrowDown, FaChevronDown, FaSearch } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAllTowns from '../../../Hooks/useAllTowns';
+import useAxiosPublic from '../../../Hooks/useAxiosPublic';
+import { useQuery } from '@tanstack/react-query';
 const Navbar = () => {
     const { searchField, setSearchField, user, logOut, loading } = useAuth();
     // console.log(searchField)
@@ -12,6 +14,18 @@ const Navbar = () => {
     // console.log(suggestions)
     const allTownName = useAllTowns();
     const inputRef = useRef();
+
+
+    const axiosPublic = useAxiosPublic();
+    const { data: userRole, isPending: isLoading } = useQuery({
+        queryKey: [user?.email, 'role'],
+        enabled: !loading,
+        queryFn: async () => {
+            const res = await axiosPublic.get(`/users/role/${user?.email}`);
+            // console.log(res.data)
+            return res.data;
+        }
+    })
 
     const handleInputChange = (event) => {
         const value = event.target.value;
@@ -65,12 +79,18 @@ const Navbar = () => {
         </div>
     }
     const routeLink = <>
+
         <div className="search-fiend" ref={inputRef}>
+
             <input type="text"
+                autoComplete="search-line1"
+                id='navSearch'
+                name='navSearch'
                 placeholder="Type to search..."
                 className="w-full border rounded-md p-2"
                 value={searchField}
                 onChange={handleInputChange} />
+
             {suggestions.length > 0 && (
                 <ul className="mt-2 border rounded-md p-2 absolute z-10 bg-white shadow-md text-left h-60 overflow-y-auto w-full">
                     {suggestions.map((town, index) => (
@@ -85,7 +105,9 @@ const Navbar = () => {
                 </ul>
             )}
             <Link to={'/searchShop'}> <button type="submit" className='h-full'><FaSearch></FaSearch></button></Link>
+
         </div>
+
         <li><NavLink to={'/'}> Home</NavLink></li>
         <li><NavLink to={'/contact'}> Contact</NavLink></li>
         {
@@ -96,15 +118,15 @@ const Navbar = () => {
             user ? <li onClick={handelLogOut}><Link>LogOut</Link> </li> :
                 <li><NavLink to={'/login'}> Login</NavLink></li>
         }
-        {
-            user && <div className="dropdown dropdown-end">
+        {userRole?.role === 'Admin' && <>
+            <div className="dropdown dropdown-end">
                 <li tabIndex={0} role="button" ><Link ><FaChevronDown></FaChevronDown></Link></li>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                     <li>  <NavLink to={'/dashboard'}>Dashboard</NavLink ></li>
 
                 </ul>
             </div>
-
+        </>
         }
 
 

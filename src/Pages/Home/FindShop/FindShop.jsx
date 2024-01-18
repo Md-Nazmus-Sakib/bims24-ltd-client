@@ -116,8 +116,9 @@ const FindShop = () => {
 
                             </div>
                             <div ref={inputRef}>
-                                <input type="text" autoComplete="off" placeholder="Type City Name" name="text" className="input-search mt-8 w-full text-xl font-extrabold text-black" value={searchField}
+                                <input type="text" id='findSearch' autoComplete="search-line2" placeholder="Type City Name" name="text" className="input-search mt-8 w-full text-xl font-extrabold text-black" value={searchField}
                                     onChange={handleInputChange} />
+
                                 {suggestions.length > 0 && (
                                     <ul className="mt-2 border rounded-md p-2 absolute z-10 bg-white shadow-md text-left h-60 overflow-y-auto w-full">
                                         {suggestions.map((town, index) => (
