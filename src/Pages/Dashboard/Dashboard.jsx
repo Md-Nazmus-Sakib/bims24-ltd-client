@@ -8,7 +8,7 @@ import imgUser from '../../assets/icon/Icon_Patient Profile.svg';
 import imgCalender from '../../assets/icon/Icon_medical history.svg';
 import shopIcon from '../../assets/Image/shopIcon.png';
 import imgAppoint from '../../assets/icon/Icon_Appointment.svg';
-import imgSetting from '../../assets/icon/Icon_Settings.svg';
+import imgRequest from '../../assets/icon/request.png';
 import { NavLink, Outlet } from 'react-router-dom';
 import { motion } from "framer-motion"
 
@@ -25,26 +25,26 @@ const Dashboard = () => {
 
 
     const routeLink = <>
-        <NavLink to={'/dashboard/allShop'}> <li>{isOpen ? <div className='flex justify-start p-2 gap-8'>
+        <li><NavLink to={'/dashboard/allShop'}>{isOpen ? <div className='flex justify-start p-2 gap-8'>
             <img className='w-10' src={shopIcon} alt="" />
             <p className='text-base font-medium'>All Shop</p>
-        </div> : <><img className='p-0 mx-auto w-10' src={shopIcon} alt="" /></>}</li></NavLink>
+        </div> : <div><img className='p-0 mx-auto w-10' src={shopIcon} alt="" /></div>} </NavLink></li>
+        <li><NavLink to={'/dashboard/shopRequest'}>{isOpen ? <div className='flex justify-start p-2 gap-8'>
+            <img className='w-10' src={imgRequest} alt="" />
+            <p className='text-base font-medium'>Shop Request</p>
+        </div> : <div><img className='p-0 mx-auto w-10' src={imgRequest} alt="" /></div>}</NavLink></li>
         <li>{isOpen ? <div className='flex justify-start p-2 gap-8'>
-            <img className='w-10' src={imgUser} alt="" />
-            <p className='text-base font-medium'>Home</p>
-        </div> : <><img className='p-0 mx-auto' src={imgUser} alt="" /></>}</li>
-        <li>{isOpen ? <div className='flex justify-start p-2 gap-8'>
-            <img className='' src={imgCalender} alt="" />
+            <img className='w-10' src={imgCalender} alt="" />
             <p className='text-base font-medium'>Home</p>
         </div> : <><img className='p-0 mx-auto' src={imgCalender} alt="" /></>}</li>
         <li>{isOpen ? <div className='flex justify-start p-2 gap-8'>
             <img className='' src={imgAppoint} alt="" />
             <p className='text-base font-medium'>Home</p>
         </div> : <><img className='p-0 mx-auto' src={imgAppoint} alt="" /></>}</li>
-        <li>{isOpen ? <div className='flex justify-start p-2 gap-8'>
+        {/* <li>{isOpen ? <div className='flex justify-start p-2 gap-8'>
             <img className='' src={imgSetting} alt="" />
             <p className='text-base font-medium'>Home</p>
-        </div> : <><img className='p-0 mx-auto' src={imgSetting} alt="" /></>}</li>
+        </div> : <><img className='p-0 mx-auto' src={imgSetting} alt="" /></>}</li> */}
 
     </>
     return (

@@ -44,37 +44,3 @@ const ShopDetail = ({ shop }) => {
 export default ShopDetail;
 
 
-
-// address
-// :
-// "Shamsur rahman khan pouro super market"
-// alterMobile
-// :
-// ""
-// email
-// :
-// ""
-// mobile
-// :
-// "01818462774"
-// notes
-// :
-// ""
-// ownerName
-// :
-// "Eyachir Arafat Roni"
-// selectedDistrict
-// :
-// "Dhaka"
-// selectedDivision
-// :
-// "Dhaka"
-// selectedTown
-// :
-// "Savar"
-// shopName
-// :
-// "Ak mobile galary"
-// userEmail
-// :
-// "asdf@asd.com"

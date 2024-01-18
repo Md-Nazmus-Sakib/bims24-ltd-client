@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import "./AllShop.css"
 import { FaTrash } from 'react-icons/fa';
 import Swal from 'sweetalert2';
-const pageSize = 4;
+const pageSize = 2;
 const AllShop = () => {
     const axiosPublic = useAxiosPublic();
     const [currentPage, setCurrentPage] = useState(1);
@@ -140,39 +140,3 @@ export default AllShop;
 
 
 
-address
-:
-"B-6,Rajjak plaza (3rd floor)"
-alterMobile
-:
-""
-email
-:
-""
-mobile
-:
-"01811917042"
-notes
-:
-""
-ownerName
-:
-"Robi ghos"
-selectedDistrict
-:
-"Dhaka"
-selectedDivision
-:
-"Dhaka"
-selectedTown
-:
-"Savar"
-shopName
-:
-"Robi telecom"
-userEmail
-:
-"asdf@asd.com"
-_id
-:
-"659e4b09223dd9566c18559e"

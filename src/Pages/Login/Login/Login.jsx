@@ -27,10 +27,12 @@ const Login = () => {
                     timer: 1500
                 });
                 navigate('/')
+                setLoading(false)
             })
             .catch(error => {
                 // setLoading(false)
                 console.log(error.message)
+                setLoading(false)
             })
     }
     return (
