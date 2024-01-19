@@ -7,7 +7,7 @@ const useAllTowns = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('./locationData.json'); // Replace with your API endpoint
+                const response = await fetch('../../public/locationData.json'); // Replace with your API endpoint
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

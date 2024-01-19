@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import "./AllShop.css"
 import { FaTrash } from 'react-icons/fa';
 import Swal from 'sweetalert2';
-const pageSize = 2;
+const pageSize = 10;
 const AllShop = () => {
     const axiosPublic = useAxiosPublic();
     const [currentPage, setCurrentPage] = useState(1);

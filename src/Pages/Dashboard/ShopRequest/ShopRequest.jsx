@@ -14,7 +14,7 @@ const ShopRequest = () => {
         queryFn: async () => {
             const res = await axiosPublic.get(`/shops/request`);
 
-            console.log(res.data)
+            // console.log(res.data)
             return res.data;
         },
     });

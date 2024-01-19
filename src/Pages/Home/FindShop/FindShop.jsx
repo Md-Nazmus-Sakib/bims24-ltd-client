@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Lottie from "lottie-react";
-import bannerBgDown from "../../../../public/scene1-2023-12-24.json";
-import bannerBg from "../../../../public/bannerBg.json";
-import Marquee from "react-fast-marquee";
-import img2 from '../../../assets/Image/dinajpur.jpg'
+import dhakaImg from '../../../assets/Image/dhaka.jpg';
+import barisalImg from '../../../assets/Image/barishal.jpg';
+import chittagongImg from '../../../assets/Image/chittagong .jpg';
+import khulnaImg from '../../../assets/Image/Khulna.jpg';
+import mymensinghImg from '../../../assets/Image/mymensingh.jpg';
+import rajshahiImg from '../../../assets/Image/rajshahi.jpg';
+import shyletImg from '../../../assets/Image/shylet.jpg';
 import './FindShop.css';
-import img1 from '../../../assets/Image/dinajpur.jpg'
-import { FaSearch } from "react-icons/fa";
+import rangpurImg from '../../../assets/Image/dinajpur.jpg'
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -147,7 +149,7 @@ const FindShop = () => {
                     <Slider {...settings}>
                         <div>
                             <div className=' px-2 py-4 rounded-3xl mx-8 group8 shadow1 item my-4 text-center  '>
-                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <img className=' h-28 sm:h-40  rounded-3xl relative' src={barisalImg} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Barisal</h1>
                                 <div className="overlay rounded-3xl"></div>
                                 <Link to={'/division/Barisal'}> <button className="card-btn text-black ">Barisal</button></Link>
@@ -158,7 +160,7 @@ const FindShop = () => {
                         <div>
 
                             <div className=' px-2 py-4 rounded-3xl mx-8 group1 shadow1 item my-4 text-center'>
-                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <img className=' h-28 sm:h-40  rounded-3xl relative' src={chittagongImg} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Chittagong</h1>
                                 <div className="overlay rounded-3xl"></div>
                                 <Link to={'/division/Chittagong'}> <button className="card-btn text-black ">Chittagong</button></Link>
@@ -169,7 +171,7 @@ const FindShop = () => {
 
                         <div>
                             <div className=' px-2 py-4 rounded-3xl mx-8 group2 shadow1 item my-4 text-center '>
-                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <img className=' h-28 sm:h-40  rounded-3xl relative' src={dhakaImg} alt="" />
                                 <h1 className='text-xl text-white  mt-6'> Dhaka</h1>
                                 <div className="overlay rounded-3xl"></div>
                                 <Link to={'/division/Dhaka'}> <button className="card-btn text-black ">Dhaka</button></Link>
@@ -180,7 +182,7 @@ const FindShop = () => {
 
                         <div>
                             <div className=' px-2 py-4 rounded-3xl mx-8 group3 shadow1 item my-4 text-center '>
-                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <img className=' h-28 sm:h-40  rounded-3xl relative' src={khulnaImg} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Khulna</h1>
                                 <div className="overlay rounded-3xl"></div>
                                 <Link to={'/division/Khulna'}> <button className="card-btn text-black ">Khulna</button></Link>
@@ -191,7 +193,7 @@ const FindShop = () => {
 
                         <div>
                             <div className=' px-2 py-4 rounded-3xl mx-8 group4 shadow1 item my-4 text-center '>
-                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <img className=' h-28 sm:h-40  rounded-3xl relative' src={rajshahiImg} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Rajshahi</h1>
                                 <div className="overlay rounded-3xl"></div>
                                 <Link to={'/division/Rajshahi'}> <button className="card-btn text-black ">Rajshahi</button></Link>
@@ -202,7 +204,7 @@ const FindShop = () => {
 
                         <div>
                             <div className=' px-2 py-4 rounded-3xl mx-8 group5 shadow1 item my-4 text-center '>
-                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <img className=' h-28 sm:h-40  rounded-3xl relative' src={rangpurImg} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Rangpur</h1>
                                 <div className="overlay rounded-3xl "></div>
                                 <Link to={'/division/Rangpur'}> <button className="card-btn text-black ">Rangpur</button></Link>
@@ -213,7 +215,7 @@ const FindShop = () => {
                         <div>
 
                             <div className=' px-2 py-4 rounded-3xl mx-8 group6 shadow1 item my-4 text-center '>
-                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <img className=' h-28 sm:h-40  rounded-3xl relative' src={mymensinghImg} alt="" />
                                 <h1 className='text-xl text-white  mt-6'> Mymensingh</h1>
                                 <div className="overlay rounded-3xl "></div>
                                 <Link to={'/division/Mymensingh'}> <button className="card-btn text-black ">Mymensingh</button></Link>
@@ -224,7 +226,7 @@ const FindShop = () => {
 
                         <div>
                             <div className=' px-2 py-4 rounded-3xl mx-8 group7 shadow1 item my-4 text-center '>
-                                <img className=' h-full rounded-3xl relative' src={img1} alt="" />
+                                <img className=' h-28 sm:h-40 rounded-3xl relative' src={shyletImg} alt="" />
                                 <h1 className='text-xl text-white  mt-6'>Sylhet</h1>
                                 <div className="overlay rounded-3xl "></div>
                                 <Link to={'/division/Sylhet'}> <button className="card-btn text-black ">Sylhet</button></Link>

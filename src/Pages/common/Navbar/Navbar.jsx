@@ -80,12 +80,9 @@ const Navbar = () => {
     }
     const routeLink = <>
 
-        <div className="search-fiend" ref={inputRef}>
+        <div className="search-fiend mb-2" ref={inputRef}>
 
             <input type="text"
-                autoComplete="search-line1"
-                id='navSearch'
-                name='navSearch'
                 placeholder="Type to search..."
                 className="w-full border rounded-md p-2"
                 value={searchField}
@@ -109,7 +106,7 @@ const Navbar = () => {
         </div>
 
         <li><NavLink to={'/'}> Home</NavLink></li>
-        <li><NavLink to={'/contact'}> Contact</NavLink></li>
+        <li><NavLink to={'/contactUs'}> Contact</NavLink></li>
         {
             user && <li><NavLink to={'/addShop'}>Add Shop</NavLink></li>
 
@@ -122,7 +119,7 @@ const Navbar = () => {
             <div className="dropdown dropdown-end">
                 <li tabIndex={0} role="button" ><Link ><FaChevronDown></FaChevronDown></Link></li>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li>  <NavLink to={'/dashboard'}>Dashboard</NavLink ></li>
+                    <li>  <NavLink to={'/dashboard/allShop'}>Dashboard</NavLink ></li>
 
                 </ul>
             </div>
@@ -134,7 +131,7 @@ const Navbar = () => {
     </>
     return (
         <div className="navbar bg-base-100 rounded-t-full lg:rounded-none pt-12">
-            <div className="navbar-start border-b lg:border-b-0 w-full lg:w-1/3">
+            <div className="navbar-start border-b lg:border-b-0 w-full md:w-36 ">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -147,7 +144,7 @@ const Navbar = () => {
                 </div>
                 <a className="btn btn-ghost text-xl font-extrabold">Bims24Ltd</a>
             </div>
-            <div className="navbar-end hidden lg:flex items-center text-center flex-1">
+            <div className="navbar-end hidden lg:flex items-center text-center grow ">
                 <ul className="menu menu-horizontal px-1 font-bold gap-4 md:pr-10">
                     {
                         routeLink

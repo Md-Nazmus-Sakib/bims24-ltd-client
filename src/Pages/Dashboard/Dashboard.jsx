@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import manyIcon from '../../assets/icon/Icon_Menu.svg';
 import sideArrow from '../../assets/icon/Icon_SideArrow_round.svg'
 import imgVector from '../../assets/icon/Icon_Vector.svg';
-import imgHome from '../../assets/icon/Icon_Home.svg';
+
 import imgUser from '../../assets/icon/Icon_Patient Profile.svg';
-import imgCalender from '../../assets/icon/Icon_medical history.svg';
+
 import shopIcon from '../../assets/Image/shopIcon.png';
-import imgAppoint from '../../assets/icon/Icon_Appointment.svg';
+
 import imgRequest from '../../assets/icon/request.png';
 import { NavLink, Outlet } from 'react-router-dom';
-import { motion } from "framer-motion"
+
 
 const variants = {
     open: { opacity: 1, x: 0 },
@@ -33,18 +33,11 @@ const Dashboard = () => {
             <img className='w-10' src={imgRequest} alt="" />
             <p className='text-base font-medium'>Shop Request</p>
         </div> : <div><img className='p-0 mx-auto w-10' src={imgRequest} alt="" /></div>}</NavLink></li>
-        <li>{isOpen ? <div className='flex justify-start p-2 gap-8'>
-            <img className='w-10' src={imgCalender} alt="" />
-            <p className='text-base font-medium'>Home</p>
-        </div> : <><img className='p-0 mx-auto' src={imgCalender} alt="" /></>}</li>
-        <li>{isOpen ? <div className='flex justify-start p-2 gap-8'>
-            <img className='' src={imgAppoint} alt="" />
-            <p className='text-base font-medium'>Home</p>
-        </div> : <><img className='p-0 mx-auto' src={imgAppoint} alt="" /></>}</li>
-        {/* <li>{isOpen ? <div className='flex justify-start p-2 gap-8'>
-            <img className='' src={imgSetting} alt="" />
-            <p className='text-base font-medium'>Home</p>
-        </div> : <><img className='p-0 mx-auto' src={imgSetting} alt="" /></>}</li> */}
+        <li><NavLink to={'/dashboard/allUser'}>{isOpen ? <div className='flex justify-start p-2 gap-8'>
+            <img className='w-10' src={imgUser} alt="" />
+            <p className='text-base font-medium'>All User</p>
+        </div> : <><img className='p-0 mx-auto' src={imgUser} alt="" /></>}</NavLink></li>
+
 
     </>
     return (
@@ -95,24 +88,5 @@ const Dashboard = () => {
     );
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// return (
-//     <div className=' min-h-[800px] bg-gradient-to-r from-[#3F096B] to-[#27094C] text-white'>
-
-//     </div>
-// );
-// };
 
 export default Dashboard;
