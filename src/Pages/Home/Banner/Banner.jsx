@@ -15,7 +15,7 @@ const Banner = () => {
                 <div className='flex-1 flex justify-center items-center flex-col '>
                     <div className='px-4 md:pl-20 text-center md:text-left mx-auto'>
                         <motion.h1
-                            initial={{ opacity: 0, scale: 0.5, x: -500 }}
+                            initial={{ opacity: 0, scale: 0.5, x: -200 }}
                             // animate={{ opacity: 1, scale: 1, x: 0 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{
@@ -32,7 +32,7 @@ const Banner = () => {
                             className='text-4xl sm:text-5xl font-extrabold'>Damaged Device? We Repair Everything.</motion.h1>
 
                         <motion.p
-                            initial={{ opacity: 0, scale: 0.5, x: 500 }}
+                            initial={{ opacity: 0, scale: 0.5, x: 200 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{
                                 type: "spring",

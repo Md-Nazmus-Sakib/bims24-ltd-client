@@ -70,7 +70,7 @@ const Register = () => {
 
 
 
-            <div className="card w-full sm:w-2/3 md:w-1/2 p-10 shadow-2xl bg-base-100">
+            <div className="card w-full sm:w-2/3 md:w-1/2 sm:p-10 pb-8 shadow-2xl bg-base-100">
 
                 <h1 className="text-5xl font-bold">Register Now !</h1>
                 <form onSubmit={handelRegister} className="card-body">

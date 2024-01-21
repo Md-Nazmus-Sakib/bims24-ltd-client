@@ -45,7 +45,7 @@ const Services = () => {
                         <p>We specialize in repairing a wide array of mobile brands and models, ensuring comprehensive service for every device that comes our way!</p>
                     </motion.div>
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.5, x: -300 }}
+                        initial={{ opacity: 0, scale: 0.5, x: -200 }}
                         // animate={{ opacity: 1, scale: 1, x: 0 }}
                         whileInView={{ opacity: 1, scale: 1, x: 0 }}
                         transition={{
@@ -66,7 +66,7 @@ const Services = () => {
                 </div>
                 <div>
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.5, x: 300 }}
+                        initial={{ opacity: 0, scale: 0.5, x: 200 }}
                         // animate={{ opacity: 1, scale: 1, x: 0 }}
                         whileInView={{ opacity: 1, scale: 1, x: 0 }}
                         transition={{
@@ -80,7 +80,7 @@ const Services = () => {
                         <p>We exclusively offer genuine and premium-quality products, ensuring utmost satisfaction and reliability for our customers' needs!</p>
                     </motion.div>
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.5, x: 300 }}
+                        initial={{ opacity: 0, scale: 0.5, x: 200 }}
                         // animate={{ opacity: 1, scale: 1, x: 0 }}
                         whileInView={{ opacity: 1, scale: 1, x: 0 }}
                         transition={{
