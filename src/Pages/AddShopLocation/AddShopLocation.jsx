@@ -45,7 +45,7 @@ const AddShopLocation = () => {
         const form = e.target;
         const shopName = form.shopName.value;
         const ownerName = form.ownerName.value;
-        const email = form.email.value;
+        const email = form.email2.value;
         const mobile = form.mobile.value;
         const alterMobile = form.alterMobile.value;
         const address = form.address.value;
@@ -97,36 +97,36 @@ const AddShopLocation = () => {
             <form onSubmit={handelAddShop} className="card-body">
                 <div className='md:flex w-full  gap-4'>
                     <div className="form-control w-full">
-                        <label className="label" htmlFor="shopName">
+                        <label className="label" htmlFor="shop-name">
                             <span className="label-text text-xl text-white font-semibold">Shop Name *</span>
                         </label>
-                        <input type="text" name='shopName' placeholder="Shop Name" id='shopName' className="input input-bordered font-semibold text-xl" required />
+                        <input id="shop-name" type="text" name='shopName' placeholder="Shop Name" className="input input-bordered font-semibold text-xl" required />
                     </div>
                     <div className="form-control w-full">
-                        <label className="label" htmlFor="ownerName">
+                        <label className="label" htmlFor="shop-owner" >
                             <span className="label-text text-xl text-white font-semibold">Owner Name *</span>
                         </label>
-                        <input type="text" name='ownerName' placeholder="Owner Name" id='ownerName' className="input input-bordered font-semibold text-xl" required />
+                        <input id="shop-owner" type="text" name='ownerName' placeholder="Owner Name" className="input input-bordered font-semibold text-xl" required />
                     </div>
                 </div>
                 <div className='lg:flex w-full  gap-4'>
                     <div className="form-control w-full">
-                        <label className="label" htmlFor="email1">
+                        <label className="label" htmlFor="shop-email" >
                             <span className="label-text text-xl text-white font-semibold">Email</span>
                         </label>
-                        <input type="email" name='email' placeholder="Email" id='email1' className="input input-bordered font-semibold text-xl" />
+                        <input id="shop-email" type="email" name='email2' placeholder="Email" className="input input-bordered font-semibold text-xl" />
                     </div>
                     <div className="form-control w-full">
-                        <label className="label" htmlFor="mobileShop">
+                        <label className="label" htmlFor="shop-mobile">
                             <span className="label-text text-xl text-white font-semibold">Mobile *</span>
                         </label>
-                        <input type='tel' name='mobile' placeholder="01xxxxxxxxx" id='mobileShop' className="input input-bordered font-semibold text-xl" maxLength="11" pattern="[0-9]{11}" required />
+                        <input id="shop-mobile" type='tel' name='mobile' placeholder="01xxxxxxxxx" className="input input-bordered font-semibold text-xl" maxLength="11" pattern="[0-9]{11}" required />
                     </div>
                     <div className="form-control w-full">
-                        <label className="label" htmlFor="alterMobile">
+                        <label className="label" htmlFor="shop-alt-mobile">
                             <span className="label-text text-xl text-white font-semibold">Alternative Mobile</span>
                         </label>
-                        <input type='tel' name='alterMobile' id='alterMobile' placeholder="01xxxxxxxxx" className="input input-bordered font-semibold text-xl" maxLength="11" pattern="[0-9]{11}" />
+                        <input id="shop-alt-mobile" type='tel' name='alterMobile' placeholder="01xxxxxxxxx" className="input input-bordered font-semibold text-xl" maxLength="11" pattern="[0-9]{11}" />
                     </div>
                 </div>
                 {/* location start  */}
@@ -134,8 +134,8 @@ const AddShopLocation = () => {
                     <div className="w-full bg-gray-500 stats stats-vertical sm:stats-horizontal shadow">
 
                         <div className="stat">
-                            <div className="stat-title uppercase text-white font-extrabold text-center my-4">Division *</div>
-                            <select value={selectedDivision} onChange={handleDivisionChange} className="p-2 border rounded">
+                            <div className="stat-title uppercase text-white font-extrabold text-center my-4" >Division *</div>
+                            <select value={selectedDivision} id='division' onChange={handleDivisionChange} className="p-2 border rounded">
                                 <option value="">Select Division</option>
                                 {locations?.divisions?.map(division => (
                                     <option key={division.name} value={division.name}>{division.name}</option>
@@ -144,8 +144,8 @@ const AddShopLocation = () => {
                         </div>
 
                         <div className="stat">
-                            <div className="stat-title uppercase text-white font-extrabold text-center my-4">District *</div>
-                            <select value={selectedDistrict} onChange={handleDistrictChange} className="p-2 border rounded">
+                            <div className="stat-title uppercase text-white font-extrabold text-center my-4" >District *</div>
+                            <select value={selectedDistrict} id='district' onChange={handleDistrictChange} className="p-2 border rounded">
                                 <option value="">Select District</option>
                                 {selectedDivision && locations?.divisions?.find(div => div.name === selectedDivision)?.districts?.map(district => (
                                     <option key={district.name} value={district.name}>{district.name}</option>
@@ -154,8 +154,8 @@ const AddShopLocation = () => {
                         </div>
 
                         <div className="stat">
-                            <div className="stat-title uppercase text-white font-extrabold text-center my-4">Upazila *</div>
-                            <select onChange={handleTownChange} className="p-2 border rounded">
+                            <div className="stat-title uppercase text-white font-extrabold text-center my-4" id='upazila'>Upazila *</div>
+                            <select onChange={handleTownChange} id='upazila' className="p-2 border rounded">
                                 <option value="">Select Upazila </option>
                                 {selectedDistrict && locations?.divisions?.find(div => div.name === selectedDivision).districts.find(dis => dis.name === selectedDistrict).towns.map((town, index) => (
                                     <option key={index} value={town}>{town}</option>
@@ -169,24 +169,24 @@ const AddShopLocation = () => {
                 {/* locattion end  */}
                 <div className='md:flex w-full  gap-4'>
                     <div className="form-control w-full">
-                        <label className="label" htmlFor="addressShop">
+                        <label className="label" htmlFor="shop-address" >
                             <span className="label-text text-xl text-white font-semibold">Address</span>
                         </label>
-                        <textarea type='text' name='address' id='addressShop' className="textarea textarea-bordered font-semibold text-xl h-24" placeholder="Full Address"></textarea>
+                        <textarea id="shop-address" type='text' name='address' className="textarea textarea-bordered font-semibold text-xl h-24" placeholder="Full Address" autoComplete="off"></textarea>
 
                     </div>
                     <div className="form-control w-full">
-                        <label className="label" htmlFor="notesShop">
+                        <label className="label" htmlFor="shop-notes" >
                             <span className="label-text text-xl text-white font-semibold">Addition Nots</span>
                         </label>
-                        <textarea type='text' name='notes' id='notesShop' className="textarea textarea-bordered font-semibold text-xl h-24" placeholder="Additional Information"></textarea>
+                        <textarea id='shop-notes' type='text' name='notes' className="textarea textarea-bordered font-semibold text-xl h-24" placeholder="Additional Information" autoComplete="off"></textarea>
 
                     </div>
                 </div>
                 {/* error message show  */}
-                <label className="label">
+                <div className="label">
                     {error && <p className='text-red-500 rounded-md font-bold bg-white p-2'>{error}</p>}
-                </label>
+                </div>
                 {/* submit button  */}
                 <div className="form-control mt-6">
                     <button className="btn btn-primary text-2xl">Add Shop</button>

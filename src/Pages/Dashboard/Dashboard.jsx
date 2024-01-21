@@ -22,7 +22,7 @@ const Dashboard = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const sidebarRef = useRef(null);
-    console.log(isOpen)
+    // console.log(isOpen)
 
     const handleOutsideClick = (event) => {
         if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
