@@ -124,7 +124,7 @@ const FindShop = () => {
 
                         ease: [0, 0.71, 0.2, 1.01]
                     }}
-                    className='mx-auto'>
+                    className='mx-auto mt-8'>
                     <div className="card_shop bg-black">
                         <div className="card__content font-bold text-3xl py-4 text-white">Find mobile repair shop near you ↓
                             <div className="container my-4">
@@ -136,9 +136,8 @@ const FindShop = () => {
                                 </div>
 
                             </div>
-                            <div ref={inputRef}>
-                                <input type="text" id='findSearch' autoComplete="search-line2" placeholder="Type City Name" name="text" className="input-search mt-8 w-full text-xl font-extrabold text-black" value={searchField}
-                                    onChange={handleInputChange} />
+                            <form ref={inputRef}>
+                                <input type="text" id='findSearch' autoComplete="search-line2" placeholder="Type City Name" name='searchField' className="input-search mt-8 w-full text-xl font-extrabold text-black" value={searchField} onChange={handleInputChange} />
 
                                 {suggestions.length > 0 && (
                                     <ul className="mt-2 border rounded-md p-2 absolute z-10 bg-white shadow-md text-left h-60 overflow-y-auto w-full">
@@ -153,11 +152,11 @@ const FindShop = () => {
                                         ))}
                                     </ul>
                                 )}
-                                <Link to={'/searchShop'}>   <button className="box-search my-8 w-full">
+                                <Link to={'/searchShop'}>   <button type="submit" className="box-search my-8 w-full">
                                     <p className="text-button text-black" >Search </p>
                                 </button></Link>
 
-                            </div>
+                            </form>
                         </div>
 
                     </div>
@@ -167,87 +166,103 @@ const FindShop = () => {
 
                     <Slider {...settings}>
 
-                        <div className=' px-2 py-4 rounded-3xl mx-8 group8 shadow1 item my-4 text-center  '>
-                            <img className=' h-28 sm:h-40  rounded-3xl relative' src={barisalImg} alt="" />
-                            <h1 className='text-xl text-white  mt-6'>Barisal</h1>
-                            <div className="overlay rounded-3xl"></div>
-                            <Link to={'/division/Barisal'}> <button className="card-btn text-black ">Barisal</button></Link>
+                        <div>
+                            <div className=' px-2 py-4 rounded-3xl mx-4 group8 shadow1 item my-4 text-center  '>
+                                <img className=' h-28 w-full px-4 sm:h-40  rounded-3xl relative' src={barisalImg} alt="" />
+                                <h1 className='text-xl text-white  mt-6'>Barisal</h1>
+                                <div className="overlay rounded-3xl"></div>
+                                <Link to={'/division/Barisal'}> <button className="card-btn text-black ">Barisal</button></Link>
+                            </div>
+                        </div>
+
+
+
+
+                        <div>
+
+                            <div className=' px-2 py-4 rounded-3xl mx-4 group1 shadow1 item my-4 text-center'>
+                                <img className=' h-28 w-full px-4 sm:h-40  rounded-3xl relative' src={chittagongImg} alt="" />
+                                <h1 className='text-xl text-white  mt-6'>Chittagong</h1>
+                                <div className="overlay rounded-3xl"></div>
+                                <Link to={'/division/Chittagong'}> <button className="card-btn text-black ">Chittagong</button></Link>
+                            </div>
+
+                        </div>
+
+
+
+                        <div>
+                            <div className=' px-2 py-4 rounded-3xl mx-4 group2 shadow1 item my-4 text-center '>
+                                <img className=' h-28 w-full px-4 sm:h-40  rounded-3xl relative' src={dhakaImg} alt="" />
+                                <h1 className='text-xl text-white  mt-6'> Dhaka</h1>
+                                <div className="overlay rounded-3xl"></div>
+                                <Link to={'/division/Dhaka'}> <button className="card-btn text-black ">Dhaka</button></Link>
+                            </div>
                         </div>
 
 
 
 
 
-                        <div className=' px-2 py-4 rounded-3xl mx-8 group1 shadow1 item my-4 text-center'>
-                            <img className=' h-28 sm:h-40  rounded-3xl relative' src={chittagongImg} alt="" />
-                            <h1 className='text-xl text-white  mt-6'>Chittagong</h1>
-                            <div className="overlay rounded-3xl"></div>
-                            <Link to={'/division/Chittagong'}> <button className="card-btn text-black ">Chittagong</button></Link>
-                        </div>
-
-
-
-
-                        <div className=' px-2 py-4 rounded-3xl mx-8 group2 shadow1 item my-4 text-center '>
-                            <img className=' h-28 sm:h-40  rounded-3xl relative' src={dhakaImg} alt="" />
-                            <h1 className='text-xl text-white  mt-6'> Dhaka</h1>
-                            <div className="overlay rounded-3xl"></div>
-                            <Link to={'/division/Dhaka'}> <button className="card-btn text-black ">Dhaka</button></Link>
+                        <div>
+                            <div className=' px-2 py-4 rounded-3xl mx-4 group3 shadow1 item my-4 text-center '>
+                                <img className=' h-28 w-full px-4 sm:h-40  rounded-3xl relative' src={khulnaImg} alt="" />
+                                <h1 className='text-xl text-white  mt-6'>Khulna</h1>
+                                <div className="overlay rounded-3xl"></div>
+                                <Link to={'/division/Khulna'}> <button className="card-btn text-black ">Khulna</button></Link>
+                            </div>
                         </div>
 
 
 
 
 
-                        <div className=' px-2 py-4 rounded-3xl mx-8 group3 shadow1 item my-4 text-center '>
-                            <img className=' h-28 sm:h-40  rounded-3xl relative' src={khulnaImg} alt="" />
-                            <h1 className='text-xl text-white  mt-6'>Khulna</h1>
-                            <div className="overlay rounded-3xl"></div>
-                            <Link to={'/division/Khulna'}> <button className="card-btn text-black ">Khulna</button></Link>
+                        <div>
+                            <div className=' px-2 py-4 rounded-3xl mx-4 group4 shadow1 item my-4 text-center '>
+                                <img className=' h-28 w-full px-4 sm:h-40  rounded-3xl relative' src={rajshahiImg} alt="" />
+                                <h1 className='text-xl text-white  mt-6'>Rajshahi</h1>
+                                <div className="overlay rounded-3xl"></div>
+                                <Link to={'/division/Rajshahi'}> <button className="card-btn text-black ">Rajshahi</button></Link>
+                            </div>
                         </div>
 
 
 
 
 
-                        <div className=' px-2 py-4 rounded-3xl mx-8 group4 shadow1 item my-4 text-center '>
-                            <img className=' h-28 sm:h-40  rounded-3xl relative' src={rajshahiImg} alt="" />
-                            <h1 className='text-xl text-white  mt-6'>Rajshahi</h1>
-                            <div className="overlay rounded-3xl"></div>
-                            <Link to={'/division/Rajshahi'}> <button className="card-btn text-black ">Rajshahi</button></Link>
+                        <div>
+                            <div className=' px-2 py-4 rounded-3xl mx-4 group5 shadow1 item my-4 text-center '>
+                                <img className=' h-28 w-full px-4 sm:h-40  rounded-3xl relative' src={rangpurImg} alt="" />
+                                <h1 className='text-xl text-white  mt-6'>Rangpur</h1>
+                                <div className="overlay rounded-3xl "></div>
+                                <Link to={'/division/Rangpur'}> <button className="card-btn text-black ">Rangpur</button></Link>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div>
+                            <div className=' px-2 py-4 rounded-3xl mx-4 group6 shadow1 item my-4 text-center '>
+                                <img className=' h-28 w-full px-4 sm:h-40  rounded-3xl relative' src={mymensinghImg} alt="" />
+                                <h1 className='text-xl text-white  mt-6'> Mymensingh</h1>
+                                <div className="overlay rounded-3xl "></div>
+                                <Link to={'/division/Mymensingh'}> <button className="card-btn text-black ">Mymensingh</button></Link>
+                            </div>
                         </div>
 
 
 
 
 
-                        <div className=' px-2 py-4 rounded-3xl mx-8 group5 shadow1 item my-4 text-center '>
-                            <img className=' h-28 sm:h-40  rounded-3xl relative' src={rangpurImg} alt="" />
-                            <h1 className='text-xl text-white  mt-6'>Rangpur</h1>
-                            <div className="overlay rounded-3xl "></div>
-                            <Link to={'/division/Rangpur'}> <button className="card-btn text-black ">Rangpur</button></Link>
-                        </div>
-
-
-
-
-
-                        <div className=' px-2 py-4 rounded-3xl mx-8 group6 shadow1 item my-4 text-center '>
-                            <img className=' h-28 sm:h-40  rounded-3xl relative' src={mymensinghImg} alt="" />
-                            <h1 className='text-xl text-white  mt-6'> Mymensingh</h1>
-                            <div className="overlay rounded-3xl "></div>
-                            <Link to={'/division/Mymensingh'}> <button className="card-btn text-black ">Mymensingh</button></Link>
-                        </div>
-
-
-
-
-
-                        <div className=' px-2 py-4 rounded-3xl mx-8 group7 shadow1 item my-4 text-center '>
-                            <img className=' h-28 sm:h-40 rounded-3xl relative' src={shyletImg} alt="" />
-                            <h1 className='text-xl text-white  mt-6'>Sylhet</h1>
-                            <div className="overlay rounded-3xl "></div>
-                            <Link to={'/division/Sylhet'}> <button className="card-btn text-black ">Sylhet</button></Link>
+                        <div>
+                            <div className=' px-2 py-4 rounded-3xl mx-4 group7 shadow1 item my-4 text-center '>
+                                <img className=' h-28 w-full px-4 sm:h-40 rounded-3xl relative' src={shyletImg} alt="" />
+                                <h1 className='text-xl text-white  mt-6'>Sylhet</h1>
+                                <div className="overlay rounded-3xl "></div>
+                                <Link to={'/division/Sylhet'}> <button className="card-btn text-black ">Sylhet</button></Link>
+                            </div>
                         </div>
 
 

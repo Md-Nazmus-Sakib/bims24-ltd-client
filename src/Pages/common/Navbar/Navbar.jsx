@@ -80,17 +80,18 @@ const Navbar = () => {
     }
     const routeLink = <>
 
-        <div className="search-fiend mb-2" ref={inputRef}>
+        <form className="search-fiend mb-2" ref={inputRef}>
 
             <input type="text"
                 placeholder="Type to search..."
                 className="w-full border rounded-md p-2"
+                name='searchField'
                 value={searchField}
                 onChange={handleInputChange} />
 
-            {suggestions.length > 0 && (
+            {suggestions?.length > 0 && (
                 <ul className="mt-2 border rounded-md p-2 absolute z-10 bg-white shadow-md text-left h-60 overflow-y-auto w-full">
-                    {suggestions.map((town, index) => (
+                    {suggestions?.map((town, index) => (
                         <li
                             key={index}
                             className="cursor-pointer py-1 hover:bg-gray-200"
@@ -103,7 +104,7 @@ const Navbar = () => {
             )}
             <Link to={'/searchShop'}> <button type="submit" className='h-full'><FaSearch></FaSearch></button></Link>
 
-        </div>
+        </form>
 
         <li><NavLink to={'/'}> Home</NavLink></li>
         <li><NavLink to={'/contactUs'}> Contact</NavLink></li>

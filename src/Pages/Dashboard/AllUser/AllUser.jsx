@@ -6,7 +6,7 @@ const AllUser = () => {
 
     const axiosPublic = useAxiosPublic();
     const [currentPage, setCurrentPage] = useState(1);
-    const { data: allUser = [], isPending: allUserLoading, refetch: allUserRefetch } = useQuery({
+    const { data: allUser = {}, isPending: allUserLoading, refetch: allUserRefetch } = useQuery({
         queryKey: ['allUser', currentPage],
         queryFn: async () => {
             const res = await axiosPublic.get(`/users?page=${currentPage}`);

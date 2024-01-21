@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import manyIcon from '../../assets/icon/Icon_Menu.svg';
 import sideArrow from '../../assets/icon/Icon_SideArrow_round.svg'
 import imgVector from '../../assets/icon/Icon_Vector.svg';
@@ -21,8 +21,24 @@ const Dashboard = () => {
 
 
     const [isOpen, setIsOpen] = useState(false)
-    // console.log(isOpen)
+    const sidebarRef = useRef(null);
+    console.log(isOpen)
 
+    const handleOutsideClick = (event) => {
+        if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+            setIsOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        // Attach the event listener when the component mounts
+        document.addEventListener('click', handleOutsideClick);
+
+        // Detach the event listener when the component unmounts
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
 
     const routeLink = <>
         <li><NavLink to={'/dashboard/allShop'}>{isOpen ? <div className='flex justify-start p-2 gap-8'>
@@ -42,15 +58,15 @@ const Dashboard = () => {
     </>
     return (
         <div className=' md:flex relative overflow-auto '>
-            <div className={`absolute top-0 z-50 md:relative`}>
+            <div ref={sidebarRef} className={`absolute top-0 z-50 md:relative`}>
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
 
                 <div className={`bg-base-200 w-full md:w-[96px]  ${isOpen ? 'hidden' : 'block '}`}>
                     {/* Page content here */}
                     {/* {<Outlet></Outlet>} */}
 
-                    <div className="p-0 md:pt-8 md:min-h-[1051px] bg-base-200 text-base-content">
-                        <label onClick={() => setIsOpen(true)} className="cursor-pointer"><img className=' mx-auto md:mb-28' src={manyIcon} alt="" /></label>
+                    <div onClick={() => setIsOpen(true)} className="p-0 md:pt-8 md:min-h-[1051px] bg-base-200 text-base-content">
+                        <label className="cursor-pointer"><img className=' mx-auto md:mb-28' src={manyIcon} alt="" /></label>
                         {/* Sidebar content here */}
                         <ul className=' hidden md:flex flex-col gap-10 '>
                             {
@@ -61,10 +77,10 @@ const Dashboard = () => {
                     </div>
 
                 </div>
-                <div className={`w-[220px] min-h-[1051px]  ${isOpen ? 'pl-0 relative' : '-pl-12 hidden'}`}>
+                <div className={`w-[220px]  ${isOpen ? 'pl-0 relative' : '-pl-12 hidden'}`}>
 
-                    <div className={`menu min-h-[1051px]  flex flex-col gap-28 pt-8  bg-base-200 text-base-content ${isOpen ? 'pr-0' : 'pr-8'}`}>
-                        <label onClick={() => setIsOpen(false)} aria-label="close sidebar" className="drawer-overlay relative ">
+                    <div onClick={() => setIsOpen(false)} className={`menu  flex flex-col gap-28 pt-8  bg-base-200 text-base-content ${isOpen ? 'pr-0' : 'pr-8'}`}>
+                        <label aria-label="close sidebar" className="drawer-overlay relative ">
                             <div className='ml-6 flex justify-start items-center gap-2'>
                                 <img className='p-2' src={imgVector} alt="" />
                                 <p className='text-2xl font-semibold mr-8'>Bims<span className='text-[#FF7594]'>24 </span></p>

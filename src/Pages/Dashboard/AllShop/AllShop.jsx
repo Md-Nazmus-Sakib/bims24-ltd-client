@@ -9,7 +9,7 @@ const AllShop = () => {
     const axiosPublic = useAxiosPublic();
     const [currentPage, setCurrentPage] = useState(1);
 
-    const { data: allShops = [], headers, isPending: allShopsLoading, refetch: allShopsRefetch } = useQuery({
+    const { data: allShops = {}, headers, isPending: allShopsLoading, refetch: allShopsRefetch } = useQuery({
         queryKey: ['allShops', currentPage],
         queryFn: async () => {
             const res = await axiosPublic.get(`/shops?page=${currentPage}`);
