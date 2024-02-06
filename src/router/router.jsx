@@ -13,6 +13,8 @@ import AllShop from "../Pages/Dashboard/AllShop/AllShop";
 import ShopRequest from "../Pages/Dashboard/ShopRequest/ShopRequest";
 import AllUser from "../Pages/Dashboard/AllUser/AllUser";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import PrivateRoute from "./PrivateRoute";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
     {
@@ -34,7 +36,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/addShop",
-                element: <AddShopLocation></AddShopLocation>,
+                element: <PrivateRoute><AddShopLocation></AddShopLocation></PrivateRoute>
             },
             {
                 path: "/searchShop",
@@ -50,15 +52,15 @@ export const router = createBrowserRouter([
                 children: [
                     {
                         path: '/dashboard/allShop',
-                        element: <AllShop></AllShop>
+                        element: <AdminRoute><AllShop></AllShop></AdminRoute>
                     },
                     {
                         path: '/dashboard/shopRequest',
-                        element: <ShopRequest></ShopRequest>
+                        element: <AdminRoute> <ShopRequest></ShopRequest></AdminRoute>
                     },
                     {
                         path: '/dashboard/allUser',
-                        element: <AllUser></AllUser>
+                        element: <AdminRoute><AllUser></AllUser></AdminRoute>
                     },
                 ]
             },

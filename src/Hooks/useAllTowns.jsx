@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useAllTowns = () => {
 
     const [allTownNames, setAllTownNames] = useState([]);
     // console.log(allTownNames)
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchLocationData = async () => {
             try {
                 const response = await fetch('./locationData.json'); // Replace with your API endpoint
                 if (!response.ok) {
@@ -27,7 +27,7 @@ const useAllTowns = () => {
             }
         };
 
-        fetchData();
+        fetchLocationData();
     }, []);
     return allTownNames;
 };

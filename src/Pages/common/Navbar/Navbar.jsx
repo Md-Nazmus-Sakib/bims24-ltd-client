@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
+import brandLogo from '../../../assets/icon/mobileLogo.png'
 import './Navbar.css'
-import { FaArrowDown, FaChevronDown, FaSearch } from 'react-icons/fa';
+import { FaChevronDown, FaSearch } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAllTowns from '../../../Hooks/useAllTowns';
-import useAxiosPublic from '../../../Hooks/useAxiosPublic';
-import { useQuery } from '@tanstack/react-query';
+import useAdmin from '../../../Hooks/useAdmin';
 const Navbar = () => {
     const { searchField, setSearchField, user, logOut, loading } = useAuth();
     // console.log(searchField)
@@ -14,18 +14,8 @@ const Navbar = () => {
     // console.log(suggestions)
     const allTownName = useAllTowns();
     const inputRef = useRef();
+    const [isAdmin, isAdminLoading] = useAdmin();
 
-
-    const axiosPublic = useAxiosPublic();
-    const { data: userRole, isPending: isLoading } = useQuery({
-        queryKey: [user?.email, 'role'],
-        enabled: !loading,
-        queryFn: async () => {
-            const res = await axiosPublic.get(`/users/role/${user?.email}`);
-            // console.log(res.data)
-            return res.data;
-        }
-    })
 
     const handleInputChange = (event) => {
         const value = event.target.value;
@@ -73,7 +63,7 @@ const Navbar = () => {
             })
     }
 
-    if (loading) {
+    if (loading || isAdminLoading) {
         return <div className='flex justify-center items-center w-full h-screen'>
             <span className="loading loading-bars loading-lg text-secondary"></span>
         </div>
@@ -116,7 +106,7 @@ const Navbar = () => {
             user ? <li onClick={handelLogOut}><Link>LogOut</Link> </li> :
                 <li><NavLink to={'/login'}> Login</NavLink></li>
         }
-        {userRole?.role === 'Admin' && <>
+        {isAdmin && <>
             <div className="dropdown dropdown-end">
                 <li tabIndex={0} role="button" ><Link ><FaChevronDown></FaChevronDown></Link></li>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
@@ -131,7 +121,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="navbar bg-base-100 rounded-t-full lg:rounded-none pt-12">
+        <div className="navbar bg-base-100 rounded-t-full lg:rounded-none pt-8">
             <div className="navbar-start border-b lg:border-b-0 w-full md:w-36 ">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -143,7 +133,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl font-extrabold">Bims24Ltd</a>
+                <img className='w-20 rounded-3xl ml-12' src={brandLogo} alt="" />
             </div>
             <div className="navbar-end hidden lg:flex items-center text-center grow ">
                 <ul className="menu menu-horizontal px-1 font-bold gap-4 md:pr-10">

@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAuth from '../../../Hooks/useAuth';
 import useAxiosPublic from '../../../Hooks/useAxiosPublic';
+import { sendEmailVerification } from 'firebase/auth';
 
 const Register = () => {
     const { user, loading, createUser, signIn, logOut, setLoading } = useAuth();
@@ -13,9 +14,10 @@ const Register = () => {
         event.preventDefault();
         const form = event.target;
         const name = form.name1.value;
-
+        const mobileNo = form.mobileNo.value;
         const email = form.email1.value;
         const password = form.password.value;
+
         setError('')
         if (password.length < 6) {
             return setError('password must be gater than 6 character or longer.')
@@ -29,10 +31,11 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                const loggedUser = result.user;
-                console.log(loggedUser)
+                // const loggedUser = result.user;
+                // console.log(loggedUser)
                 const userInfo = {
                     name,
+                    mobileNo,
                     email,
                     role: 'user'
                 }
@@ -40,16 +43,20 @@ const Register = () => {
                     .then(res => {
                         if (res.data.insertedId) {
                             // console.log('user added to the database')
-                            Swal.fire({
-                                position: 'top-end',
-                                icon: 'success',
-                                title: 'User created successfully.',
-                                showConfirmButton: false,
-                                timer: 1500
-                            });
                             setLoading(false)
                             form.reset();
-                            navigate('/')
+                            sendEmailVerification(result.user)
+                                .then(() => {
+                                    Swal.fire({
+                                        title: "Check Your Email to Verify?",
+
+                                        icon: "question"
+                                    });
+                                })
+                                .catch(error => {
+                                    setLoading(false)
+                                    setError(error.message)
+                                })
                         }
                         else {
                             setLoading(false)
@@ -75,26 +82,35 @@ const Register = () => {
                 <h1 className="text-5xl font-bold">Register Now !</h1>
                 <form onSubmit={handelRegister} className="card-body">
                     <div className="form-control">
-                        <label className="label">
+                        <label className="label" htmlFor='regName'>
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" name='name1' placeholder="Your Name" className="input input-bordered" required />
+                        <input id='regName' type="text" name='name1' placeholder="Your Name" className="input input-bordered" required />
+                    </div>
+                    <div className="form-control w-full">
+                        <label className="label" htmlFor='regMobile'>
+                            <span className="label-text ">Mobile No</span>
+                        </label>
+                        <input id='regMobile' type='tel' name='mobileNo' placeholder="01xxxxxxxxx" className="input input-bordered " maxLength="11" pattern="[0-9]{11}" required />
                     </div>
                     <div className="form-control">
-                        <label className="label" >
+                        <label className="label" htmlFor='regEmail' >
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name='email1' placeholder="email" className="input input-bordered" required />
+                        <input id='regEmail' type="email" name='email1' placeholder="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
-                        <label className="label">
+                        <label className="label" htmlFor='regPass'>
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                        <input id='regPass' type="password" name='password' placeholder="password" className="input input-bordered" required />
                     </div>
-                    <label className="label">
-                        {error && <p className='text-red-500 rounded-md font-bold bg-white p-2'>{error}</p>}
-                    </label>
+                    {
+                        error && <div className="label">
+                            <p className='text-red-500 rounded-md font-bold bg-white p-2'>{error}</p>
+                        </div>
+                    }
+
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Register</button>
                     </div>

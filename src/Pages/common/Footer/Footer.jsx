@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+import footerLogo from '../../../assets/icon/mobileLogo.png'
 
 const Footer = () => {
     return (
@@ -9,7 +10,7 @@ const Footer = () => {
                 <div className='flex flex-col sm:flex-row justify-center items-center '>
 
                     <h1 className="font-bold text-3xl">
-                        Bims24Ltd<br />
+                        <img className='w-20 mx-auto rounded-3xl' src={footerLogo} alt="" />
                         <span className='text-xl'>Providing reliable tech since 2023</span>
                     </h1>
 
